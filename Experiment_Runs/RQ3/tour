@@ -1,0 +1,360 @@
+D:\ProgramData\anaconda3\envs\TEST\python.exe C:\Users\DELL\Desktop\WebMAC\metamorphosis.py
+
+Assistant:
+ {'Tour Name': ['Senegal-Pink-Lake-Camel-Ride', 'Senegal_Pink_Lake_Camel_Ride', 'Camel_Ride_123', 'Pink Lake Ride 2023', 'Pink-Lake-Camel-Ride'], 'Tour Description': ['Unique camel ride on dunes.Best experience ever.', 'Camel ride on the dunes surrounding Pink Lake.', 'ExperienceUniqueCamelRide.', 'Ride amidst sand dunes beyond the Pink Lake.', 'Join our camel tour near the iconic Pink Lake.'], 'Tour Price': ['0', '49', '75.99', '150', '100.00'], 'Tour Capacity': [' ', '0', '10', '50', '35']}
+
+Assistant:
+ {'Tour Name': ['0', 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', '!@#$$%^&*()_+-=[]{}|;:\'",<.>/?\\'], 'Tour Description': ['AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', 'Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;', 'Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... '], 'Tour Price': ['-99', '99abc', '99.123', '$99'], 'Tour Capacity': ['-20', '20.5', '20abc', '%20']}
+已成功生成 output.csv 文件
+Test case combination：
+<csv.DictReader object at 0x000002476A532210>
+
+===== VALID=====
+
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink-Lake-Camel-Ride", Tour Description "ExperienceUniqueCamelRide.", Tour Price "75.99", and Tour Capacity "0" and submit
+Then the tour "Pink-Lake-Camel-Ride" is in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink Lake Ride 2023", Tour Description "Camel ride on the dunes surrounding Pink Lake.", Tour Price "150", and Tour Capacity "10" and submit
+Then the tour "Pink Lake Ride 2023" is in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Camel_Ride_123", Tour Description "Camel ride on the dunes surrounding Pink Lake.", Tour Price "150", and Tour Capacity "50" and submit
+Then the tour "Camel_Ride_123" is in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Camel_Ride_123", Tour Description "Camel ride on the dunes surrounding Pink Lake.", Tour Price "150", and Tour Capacity "35" and submit
+Then the tour "Camel_Ride_123" is in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal-Pink-Lake-Camel-Ride", Tour Description "ExperienceUniqueCamelRide.", Tour Price "150", and Tour Capacity "10" and submit
+Then the tour "Senegal-Pink-Lake-Camel-Ride" is in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Camel_Ride_123", Tour Description "Ride amidst sand dunes beyond the Pink Lake.", Tour Price "49", and Tour Capacity "50" and submit
+Then the tour "Camel_Ride_123" is in tour list
+----------------------------------------
+
+===== INVALID=====
+
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink-Lake-Camel-Ride", Tour Description "Camel ride on the dunes surrounding Pink Lake.", Tour Price "49", and Tour Capacity "20abc" and submit
+Then the tour "Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal_Pink_Lake_Camel_Ride", Tour Description "Unique camel ride on dunes.Best experience ever.", Tour Price "99.123", and Tour Capacity "20.5" and submit
+Then the tour "Senegal_Pink_Lake_Camel_Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Description "ExperienceUniqueCamelRide.", Tour Price "100.00", and Tour Capacity "20.5" and submit
+Then the tour "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Description "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Price "0", and Tour Capacity "50" and submit
+Then the tour "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal-Pink-Lake-Camel-Ride", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "99abc", and Tour Capacity "35" and submit
+Then the tour "Senegal-Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal_Pink_Lake_Camel_Ride", Tour Description "Join our camel tour near the iconic Pink Lake.", Tour Price "150", and Tour Capacity "-20" and submit
+Then the tour "Senegal_Pink_Lake_Camel_Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Camel_Ride_123", Tour Description "Unique camel ride on dunes.Best experience ever.", Tour Price "49", and Tour Capacity "%20" and submit
+Then the tour "Camel_Ride_123" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal-Pink-Lake-Camel-Ride", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;", Tour Price "-99", and Tour Capacity "50" and submit
+Then the tour "Senegal-Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal-Pink-Lake-Camel-Ride", Tour Description "Ride amidst sand dunes beyond the Pink Lake.", Tour Price "75.99", and Tour Capacity "20.5" and submit
+Then the tour "Senegal-Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink Lake Ride 2023", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "$99", and Tour Capacity "0" and submit
+Then the tour "Pink Lake Ride 2023" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "<.>/?\"", Tour Description "Camel ride on the dunes surrounding Pink Lake.", Tour Price "-99", and Tour Capacity "20.5" and submit
+Then the tour "<.>/?\"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "0", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;", Tour Price "$99", and Tour Capacity "10" and submit
+Then the tour "0" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "!@#$$%^&*()_+-=[]{}35	ExperienceUniqueCamelRide.	99.123	0 "", Tour Description "Join our camel tour near the iconic Pink Lake.", Tour Price "99abc", and Tour Capacity "20abc" and submit
+Then the tour "!@#$$%^&*()_+-=[]{}35	ExperienceUniqueCamelRide.	99.123	0 "" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink-Lake-Camel-Ride", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "150", and Tour Capacity "%20" and submit
+Then the tour "Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "<.>/?\"", Tour Description "Unique camel ride on dunes.Best experience ever.", Tour Price "99abc", and Tour Capacity "50" and submit
+Then the tour "<.>/?\"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "<.>/?\"", Tour Description "Ride amidst sand dunes beyond the Pink Lake.", Tour Price "100.00", and Tour Capacity "0" and submit
+Then the tour "<.>/?\"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "<.>/?\"", Tour Description "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Price "75.99", and Tour Capacity "-20" and submit
+Then the tour "<.>/?\"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name ";:'"", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;", Tour Price "100.00", and Tour Capacity "-20" and submit
+Then the tour ";:'"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal-Pink-Lake-Camel-Ride", Tour Description "Camel ride on the dunes surrounding Pink Lake.", Tour Price "$99", and Tour Capacity "-20" and submit
+Then the tour "Senegal-Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Camel_Ride_123", Tour Description "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Price "99.123", and Tour Capacity "0" and submit
+Then the tour "Camel_Ride_123" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink Lake Ride 2023", Tour Description "Join our camel tour near the iconic Pink Lake.", Tour Price "0", and Tour Capacity "%20" and submit
+Then the tour "Pink Lake Ride 2023" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Camel_Ride_123", Tour Description "ExperienceUniqueCamelRide.", Tour Price "$99", and Tour Capacity " " and submit
+Then the tour "Camel_Ride_123" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "-99", and Tour Capacity "-20" and submit
+Then the tour "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Description "Ride amidst sand dunes beyond the Pink Lake.", Tour Price "$99", and Tour Capacity "20abc" and submit
+Then the tour "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "!@#$$%^&*()_+-=[]{}20abc	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	-99	010	Join our camel tour near the iconic Pink Lake."", Tour Description "Ride amidst sand dunes beyond the Pink Lake.", Tour Price "0", and Tour Capacity "10" and submit
+Then the tour "!@#$$%^&*()_+-=[]{}20abc	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	-99	010	Join our camel tour near the iconic Pink Lake."" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal_Pink_Lake_Camel_Ride", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "75.99", and Tour Capacity "50" and submit
+Then the tour "Senegal_Pink_Lake_Camel_Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Description "Join our camel tour near the iconic Pink Lake.", Tour Price "49", and Tour Capacity "35" and submit
+Then the tour "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink Lake Ride 2023", Tour Description "Unique camel ride on dunes.Best experience ever.", Tour Price "-99", and Tour Capacity "35" and submit
+Then the tour "Pink Lake Ride 2023" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name ";:'"", Tour Description "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Price "$99", and Tour Capacity "20.5" and submit
+Then the tour ";:'"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal_Pink_Lake_Camel_Ride", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;", Tour Price "$99", and Tour Capacity "%20" and submit
+Then the tour "Senegal_Pink_Lake_Camel_Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal_Pink_Lake_Camel_Ride", Tour Description "ExperienceUniqueCamelRide.", Tour Price "0", and Tour Capacity "20abc" and submit
+Then the tour "Senegal_Pink_Lake_Camel_Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "!@#$$%^&*()_+-=[]{} "", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "49", and Tour Capacity " " and submit
+Then the tour "!@#$$%^&*()_+-=[]{} "" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink Lake Ride 2023", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;", Tour Price "100.00", and Tour Capacity "20abc" and submit
+Then the tour "Pink Lake Ride 2023" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "0", Tour Description "Unique camel ride on dunes.Best experience ever.", Tour Price "0", and Tour Capacity "0" and submit
+Then the tour "0" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "<.>/?\"", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;", Tour Price "150", and Tour Capacity "20abc" and submit
+Then the tour "<.>/?\"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Description "Unique camel ride on dunes.Best experience ever.", Tour Price "150", and Tour Capacity "0" and submit
+Then the tour "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal_Pink_Lake_Camel_Ride", Tour Description "Ride amidst sand dunes beyond the Pink Lake.", Tour Price "-99", and Tour Capacity "35" and submit
+Then the tour "Senegal_Pink_Lake_Camel_Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name ";:'"", Tour Description "ExperienceUniqueCamelRide.", Tour Price "-99", and Tour Capacity "%20" and submit
+Then the tour ";:'"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink-Lake-Camel-Ride", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;", Tour Price "0", and Tour Capacity "20.5" and submit
+Then the tour "Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink-Lake-Camel-Ride", Tour Description "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Price "100.00", and Tour Capacity "35" and submit
+Then the tour "Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "<.>/?\"", Tour Description "Join our camel tour near the iconic Pink Lake.", Tour Price "$99", and Tour Capacity "35" and submit
+Then the tour "<.>/?\"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink-Lake-Camel-Ride", Tour Description "Join our camel tour near the iconic Pink Lake.", Tour Price "$99", and Tour Capacity "50" and submit
+Then the tour "Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal-Pink-Lake-Camel-Ride", Tour Description "Ride amidst sand dunes beyond the Pink Lake.", Tour Price "99.123", and Tour Capacity "%20" and submit
+Then the tour "Senegal-Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink Lake Ride 2023", Tour Description "Ride amidst sand dunes beyond the Pink Lake.", Tour Price "49", and Tour Capacity "20.5" and submit
+Then the tour "Pink Lake Ride 2023" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "0", Tour Description "ExperienceUniqueCamelRide.", Tour Price "49", and Tour Capacity "50" and submit
+Then the tour "0" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Description "Camel ride on the dunes surrounding Pink Lake.", Tour Price "75.99", and Tour Capacity "10" and submit
+Then the tour "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal-Pink-Lake-Camel-Ride", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;", Tour Price "49", and Tour Capacity "0" and submit
+Then the tour "Senegal-Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Camel_Ride_123", Tour Description "Unique camel ride on dunes.Best experience ever.", Tour Price "75.99", and Tour Capacity "20abc" and submit
+Then the tour "Camel_Ride_123" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "!@#$$%^&*()_+-=[]{} "", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;", Tour Price "75.99", and Tour Capacity "35" and submit
+Then the tour "!@#$$%^&*()_+-=[]{} "" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "0", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "99abc", and Tour Capacity "20.5" and submit
+Then the tour "0" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "0", Tour Description "Camel ride on the dunes surrounding Pink Lake.", Tour Price "100.00", and Tour Capacity "%20" and submit
+Then the tour "0" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "<.>/?\"", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "99.123", and Tour Capacity "10" and submit
+Then the tour "<.>/?\"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;", Tour Price "99.123", and Tour Capacity " " and submit
+Then the tour "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink-Lake-Camel-Ride", Tour Description "Ride amidst sand dunes beyond the Pink Lake.", Tour Price "99abc", and Tour Capacity "-20" and submit
+Then the tour "Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Camel_Ride_123", Tour Description "Join our camel tour near the iconic Pink Lake.", Tour Price "-99", and Tour Capacity "0" and submit
+Then the tour "Camel_Ride_123" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal_Pink_Lake_Camel_Ride", Tour Description "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Price "49", and Tour Capacity "10" and submit
+Then the tour "Senegal_Pink_Lake_Camel_Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Camel_Ride_123", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake...; DROP TABLE tours;", Tour Price "99abc", and Tour Capacity "20.5" and submit
+Then the tour "Camel_Ride_123" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink Lake Ride 2023", Tour Description "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Price "99abc", and Tour Capacity " " and submit
+Then the tour "Pink Lake Ride 2023" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal-Pink-Lake-Camel-Ride", Tour Description "Join our camel tour near the iconic Pink Lake.", Tour Price "99.123", and Tour Capacity "20abc" and submit
+Then the tour "Senegal-Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal_Pink_Lake_Camel_Ride", Tour Description "Camel ride on the dunes surrounding Pink Lake.", Tour Price "99abc", and Tour Capacity "0" and submit
+Then the tour "Senegal_Pink_Lake_Camel_Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "0", Tour Description "Join our camel tour near the iconic Pink Lake.", Tour Price "75.99", and Tour Capacity "%20" and submit
+Then the tour "0" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Camel_Ride_123", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "0", and Tour Capacity "-20" and submit
+Then the tour "Camel_Ride_123" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink Lake Ride 2023", Tour Description "Camel ride on the dunes surrounding Pink Lake.", Tour Price "75.99", and Tour Capacity " " and submit
+Then the tour "Pink Lake Ride 2023" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "<.>/?\"", Tour Description "ExperienceUniqueCamelRide.", Tour Price "49", and Tour Capacity "-20" and submit
+Then the tour "<.>/?\"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name ";:'"", Tour Description "Camel ride on the dunes surrounding Pink Lake.", Tour Price "99.123", and Tour Capacity "0" and submit
+Then the tour ";:'"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "!@#$$%^&*()_+-=[]{}35	Camel ride on the dunes surrounding Pink Lake."", Tour Description "Unique camel ride on dunes.Best experience ever.", Tour Price "100.00", and Tour Capacity "50" and submit
+Then the tour "!@#$$%^&*()_+-=[]{}35	Camel ride on the dunes surrounding Pink Lake."" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "0", Tour Description "Unique camel ride on dunes.Best experience ever.", Tour Price "99.123", and Tour Capacity "-20" and submit
+Then the tour "0" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Description "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Price "99abc", and Tour Capacity "%20" and submit
+Then the tour "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink Lake Ride 2023", Tour Description "ExperienceUniqueCamelRide.", Tour Price "99.123", and Tour Capacity "50" and submit
+Then the tour "Pink Lake Ride 2023" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "<.>/?\"", Tour Description "Join our camel tour near the iconic Pink Lake.", Tour Price "0", and Tour Capacity " " and submit
+Then the tour "<.>/?\"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal-Pink-Lake-Camel-Ride", Tour Description "Unique camel ride on dunes.Best experience ever.", Tour Price "$99", and Tour Capacity "10" and submit
+Then the tour "Senegal-Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Senegal_Pink_Lake_Camel_Ride", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "100.00", and Tour Capacity " " and submit
+Then the tour "Senegal_Pink_Lake_Camel_Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink-Lake-Camel-Ride", Tour Description "Unique camel ride on dunes.Best experience ever.", Tour Price "-99", and Tour Capacity "10" and submit
+Then the tour "Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name ";:'"", Tour Description "Join our camel tour near the iconic Pink Lake.", Tour Price "150", and Tour Capacity "20.5" and submit
+Then the tour ";:'"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "<.>/?\"", Tour Description "ExperienceUniqueCamelRide.", Tour Price "99abc", and Tour Capacity "%20" and submit
+Then the tour "<.>/?\"" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Camel_Ride_123", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "99abc", and Tour Capacity "10" and submit
+Then the tour "Camel_Ride_123" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink Lake Ride 2023", Tour Description "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", Tour Price "150", and Tour Capacity "-20" and submit
+Then the tour "Pink Lake Ride 2023" is not in tour list
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/admin/tours.html"
+When I input the Tour Name "Pink-Lake-Camel-Ride", Tour Description "Experience a unique camel ride on the dunes surrounding the iconic Pink Lake... ", Tour Price "99.123", and Tour Capacity "20abc" and submit
+Then the tour "Pink-Lake-Camel-Ride" is not in tour list
+----------------------------------------
+
+===== STATISTICS =====
+
+Generated 6 valid test cases
+Generated 78 invalid test cases
+Total 84 test cases
+========================================
+

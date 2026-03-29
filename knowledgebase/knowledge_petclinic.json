@@ -1,0 +1,265 @@
+{
+    "Add owner": [
+        {
+            "Variable": "first name",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Letter + space/hyphen/apostrophe",
+                        "For characters 1 to 50, try to take boundary values as much as possible",
+                        "Including '(apostrophe, commonly seen in Irish surnames), - (hyphen, used in compound names)",
+                        "Abbreviations containing periods. A few names may contain abbreviations"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Including numbers",
+                        "Including special symbols (@, #, $)",
+                        "null value",
+                        "More than 50 characters"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "last name",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Letter + space/hyphen/apostrophe",
+                        "For characters 1 to 50, try to take boundary values as much as possible",
+                        "Including '(apostrophe, commonly seen in Irish surnames), - (hyphen, used in compound names)",
+                        "last name containing articles/prepositions(with Spaces)"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Including numbers",
+                        "Including special symbols (@, #, $)",
+                        "null value",
+                        "More than 50 characters",
+                        "last name containing articles/prepositions(without Spaces)"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "city",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Letter + space/hyphen",
+                        "For characters 2 to 50, try to take boundary values as much as possible"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Including numbers",
+                        "Including special symbols (@, #, $)",
+                        "null value",
+                        "More than 50 characters",
+                        "Non-existent city names"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "address",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Number + letter + space /#/-",
+                        "For characters 5 to 100, try to take boundary values as much as possible",
+                        "Allow common abbreviations"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Pure text without numbers",
+                        "Special symbol (@,!,*)",
+                        "null value",
+                        "More than 100 characters",
+                        "A continuous string without space separation"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "telephone",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "10-digit pure numbers or with delimiters",
+                        "Numbers beginning with the United States area code"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Less than ten digits",
+                        "More than 10 digits",
+                        "Containing letters",
+                        "Incorporating symbols"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Edit owner": [
+        {
+            "Variable": "first name",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Letter + space/hyphen/apostrophe",
+                        "For characters 1 to 50, try to take boundary values as much as possible",
+                        "Including '(apostrophe, commonly seen in Irish surnames), - (hyphen, used in compound names)",
+                        "Abbreviations containing periods. A few names may contain abbreviations"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Including numbers",
+                        "Including special symbols (@, #, $)",
+                        "null value",
+                        "More than 50 characters"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "last name",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Letter + space/hyphen/apostrophe",
+                        "For characters 1 to 50, try to take boundary values as much as possible",
+                        "Including '(apostrophe, commonly seen in Irish surnames), - (hyphen, used in compound names)",
+                        "last name containing articles/prepositions(with Spaces)"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Including numbers",
+                        "Including special symbols (@, #, $)",
+                        "null value",
+                        "More than 50 characters",
+                        "last name containing articles/prepositions(without Spaces)"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "city",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Letter + space/hyphen",
+                        "For characters 2 to 50, try to take boundary values as much as possible"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Including numbers",
+                        "Including special symbols (@, #, $)",
+                        "null value",
+                        "More than 50 characters",
+                        "single letter signal",
+                        "Non-existent city names"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "address",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Number + letter + space /#/-",
+                        "For characters 5 to 100, try to take boundary values as much as possible",
+                        "Allow common abbreviations"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Pure text without numbers",
+                        "Special symbol (@,!,*)",
+                        "null value",
+                        "More than 100 characters",
+                        "A continuous string without space separation"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "telephone",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "10-digit pure numbers or with delimiters",
+                        "Numbers beginning with the United States area code"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Less than ten digits",
+                        "More than 10 digits",
+                        "Containing letters",
+                        "Incorporating symbols"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Add pet": [
+        {
+            "Variable": "name",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Only include alphabetic characters (A-Z, a-z)",
+                        "Including letters and numbers (0-9)",
+                        "It contains letters and Spaces",
+                        "Include letters and allowed special symbols (such as -,., ')",
+                        "Minimum length boundary (1 character)",
+                        "Maximum length boundary (50 characters)",
+                        "Mixed content (letters, numbers, names, allowed symbols and Spaces)"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "null character",
+                        "Overly long input (more than 50 characters)",
+                        "Only Spaces",
+                        "Contains prohibited special characters (such as @, #, $, %,!)",
+                        "Contains emojis or Unicode controllers"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "birthDate",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "The valid date is in the past (non-leap years)",
+                        "Valid date in the past (leap year, February 29th)",
+                        "Boundary date: The most recent past date",
+                        "Boundary date: A date from a long time ago",
+                        "Boundary date: Month boundary"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Incorrect format (not in YYYY-MM-DD format)",
+                        "The date does not exist (invalid combination)",
+                        "Invalid months (<1 or >12)",
+                        "Date invalid (<1 or >31)",
+                        "Invalid year (<1900 or >2100)",
+                        "future date",
+                        "nonblank input column"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,198 @@
+{
+    "register account": [
+        {
+            "Variable": "Name",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Letter + space/hyphen/apostrophe",
+                        "For characters 1 to 50, try to take boundary values as much as possible",
+                        "Including '(apostrophe, commonly seen in Irish surnames), - (hyphen, used in compound names)",
+                        "Abbreviations containing periods. A few names may contain abbreviations"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Including numbers",
+                        "Including special symbols (@, #, $)",
+                        "null value",
+                        "More than 50 characters"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Last Name",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Letter + space/hyphen/apostrophe",
+                        "For characters 1 to 50, try to take boundary values as much as possible",
+                        "Including '(apostrophe, commonly seen in Irish surnames), - (hyphen, used in compound names)",
+                        "last name containing articles/prepositions(with Spaces)"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Including numbers",
+                        "Including special symbols (@, #, $)",
+                        "null value",
+                        "More than 50 characters",
+                        "last name containing articles/prepositions(without Spaces)"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Password",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "8 to 20 characters",
+                        "It includes at least three of the following: capital letters, lowercase letters, numbers, and special symbols",
+                        "A mixture containing numbers and letters"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Less than 8 digits",
+                        "More than 20 digits",
+                        "Contains only letters",
+                        "Only contains numbers",
+                        "null character string"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Username",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "3 to 20 characters",
+                        "Composed of letters, numbers and underscores",
+                        "Composed of letters and numbers",
+                        "Composed of letters"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Contains special symbols (@# $%)",
+                        "Less than 3 digits",
+                        "More than 20 digits",
+                        "null character string"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Email",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "Compliant with RFC 5322 standard (mailto:xxx@xxx.xxx)",
+                        "It includes the user name, the @ symbol, a valid domain name, and a valid suffix",
+                        "Including the secondary domain (mailto:xxx@sub.domain.com)",
+                        ""
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "The @ symbol is missing.",
+                        "Missing domain name",
+                        "Consecutive dots (..)",
+                        "The suffix is less than two characters"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Publish blog": [
+        {
+            "Variable": "title",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 100 characters",
+                        "It includes English and numbers",
+                        "It includes parentheses, hyphens and exclamation marks",
+                        "It includes Chinese, English and numbers"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "null value",
+                        "More than 100 characters",
+                        "Contains the <script> tag",
+                        "Contains non-UTF-8 encoded characters"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "post",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 5,000 characters",
+                        "It includes Chinese, English and numbers",
+                        "It includes parentheses, hyphens and exclamation marks",
+                        "It includes English and numbers"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "null value",
+                        "More than 5,000 characters",
+                        "Contains the <script> tag",
+                        "Contains non-UTF-8 encoded characters"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Enter blog": [
+        {
+            "Variable": "title",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 100 characters",
+                        "It includes English and numbers",
+                        "It includes parentheses, hyphens and exclamation marks",
+                        "It includes Chinese, English and numbers"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "null value",
+                        "More than 100 characters",
+                        "Contains the <script> tag",
+                        "Contains non-UTF-8 encoded characters"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "post",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 5,000 characters",
+                        "It includes Chinese, English and numbers",
+                        "It includes parentheses, hyphens and exclamation marks",
+                        "It includes English and numbers"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "null value",
+                        "More than 5,000 characters",
+                        "Contains the <script> tag",
+                        "Contains non-UTF-8 encoded characters"
+                    ]
+                }
+            ]
+        }
+    ]
+}

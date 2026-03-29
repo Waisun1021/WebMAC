@@ -1,0 +1,172 @@
+{
+    "User login": [
+        {
+            "Variable": "Username",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "3 to 20 characters",
+                        "Composed of letters, numbers and underscores",
+                        "Composed of letters and numbers",
+                        "Composed of letters"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Contains special symbols (@# $%)",
+                        "Less than 3 digits",
+                        "More than 20 digits",
+                        "null character string"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Password",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "8 to 20 characters",
+                        "It includes at least three of the following: capital letters, lowercase letters, numbers, and special symbols",
+                        "A mixture containing numbers and letters"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Less than 8 digits",
+                        "More than 20 digits",
+                        "Contains only letters",
+                        "Only contains numbers",
+                        "null character string"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Register account": [
+        {
+            "Variable": "Username",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "3 to 20 characters",
+                        "Composed of letters, numbers and underscores",
+                        "Composed of letters and numbers",
+                        "Composed of letters"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Contains special symbols (@# $%)",
+                        "Less than 3 digits",
+                        "More than 20 digits",
+                        "null character string"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Password",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "8 to 20 characters",
+                        "It includes at least three of the following: capital letters, lowercase letters, numbers, and special symbols",
+                        "A mixture containing numbers and letters"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Less than 8 digits",
+                        "More than 20 digits",
+                        "Contains only letters",
+                        "Only contains numbers",
+                        "null character string"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Phone Number",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "10-digit pure numbers or with delimiters",
+                        "Numbers beginning with the United States area code"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "Less than ten digits",
+                        "More than 10 digits",
+                        "Containing letters",
+                        "Incorporating symbols"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Initial Balance",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "0",
+                        "1-10000",
+                        "10001-1000000"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "minus",
+                        "Containing letters",
+                        "Incorporating symbols",
+                        "null value",
+                        "More than two decimal places"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Deposit": [
+        {
+            "Variable": "Amount",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "positive integer",
+                        "decimal"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "minus",
+                        "Containing letters",
+                        "Incorporating symbols",
+                        "More than two decimal places"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Withdraw": [
+        {
+            "Variable": "Amount",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "positive integer",
+                        "decimal"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "minus",
+                        "Containing letters",
+                        "Incorporating symbols",
+                        "More than two decimal places"
+                    ]
+                }
+            ]
+        }
+    ]
+}

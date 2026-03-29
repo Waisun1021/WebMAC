@@ -1,0 +1,336 @@
+D:\ProgramData\anaconda3\envs\TEST\python.exe C:\Users\DELL\Desktop\WebMAC\metamorphosis.py
+
+Assistant:
+ {'username': ['user1', 'testUser', 'exampleName', 'user_1'], 'password': ['password1', 'Pass1234@', 'SecureP@ss'], 'phoneNumber': ['9876543210', '+1-555-666-7777', '741-852-9630'], 'balance': ['0', '1000', '99999']}
+
+Assistant:
+ {'username': ['ab', '', 'alice@123', 'AAAAAAAAAAAAAAAAAAAAA'], 'password': ['1234567', '', 'abcdefghi', '123456789', 'ppppppppppppppppppppp'], 'phoneNumber': ['123456789', '09876543210', '111222abcd', '444555@666', ''], 'balance': ['-1', '5a', '1@', '', '3.141']}
+已成功生成 output.csv 文件
+Test case combination：
+<csv.DictReader object at 0x000001FF6284EF90>
+
+===== VALID=====
+
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user1", the Password "SecureP@ss", Phone Number "9876543210", Initial Balance "99999", and then clicked "Register"
+Then register successfully
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "exampleName", the Password "Pass1234@", Phone Number "9876543210", Initial Balance "1000", and then clicked "Register"
+Then register successfully
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user1", the Password "password1", Phone Number "741-852-9630", Initial Balance "99999", and then clicked "Register"
+Then register successfully
+----------------------------------------
+
+===== INVALID=====
+
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "exampleName", the Password "password1", Phone Number "111222abcd", Initial Balance "3.141", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user1", the Password "Pass1234@", Phone Number "", Initial Balance "0", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "", the Password "Pass1234@", Phone Number "09876543210", Initial Balance "99999", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "alice@123", the Password "abcdefghi", Phone Number "9876543210", Initial Balance "", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "testUser", the Password "password1", Phone Number "09876543210", Initial Balance "1000", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "Pass1234@", Phone Number "123456789", Initial Balance "1000", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user_1", the Password "SecureP@ss", Phone Number "111222abcd", Initial Balance "1000", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "ab", the Password "ppppppppppppppppppppp", Phone Number "111222abcd", Initial Balance "", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user_1", the Password "abcdefghi", Phone Number "09876543210", Initial Balance "5a", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user1", the Password "abcdefghi", Phone Number "+1-555-666-7777", Initial Balance "3.141", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "ab", the Password "", Phone Number "", Initial Balance "1@", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "testUser", the Password "abcdefghi", Phone Number "123456789", Initial Balance "0", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "testUser", the Password "Pass1234@", Phone Number "444555@666", Initial Balance "-1", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "", the Password "ppppppppppppppppppppp", Phone Number "123456789", Initial Balance "-1", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "", Phone Number "9876543210", Initial Balance "3.141", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "alice@123", the Password "password1", Phone Number "123456789", Initial Balance "99999", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "exampleName", the Password "123456789", Phone Number "741-852-9630", Initial Balance "5a", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "ab", the Password "123456789", Phone Number "9876543210", Initial Balance "1000", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "alice@123", the Password "Pass1234@", Phone Number "+1-555-666-7777", Initial Balance "1@", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user_1", the Password "123456789", Phone Number "123456789", Initial Balance "3.141", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "exampleName", the Password "", Phone Number "09876543210", Initial Balance "-1", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "testUser", the Password "1234567", Phone Number "9876543210", Initial Balance "5a", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "", the Password "1234567", Phone Number "741-852-9630", Initial Balance "1@", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "", the Password "123456789", Phone Number "+1-555-666-7777", Initial Balance "", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "exampleName", the Password "1234567", Phone Number "444555@666", Initial Balance "0", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user1", the Password "ppppppppppppppppppppp", Phone Number "444555@666", Initial Balance "5a", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user1", the Password "1234567", Phone Number "111222abcd", Initial Balance "-1", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "", the Password "abcdefghi", Phone Number "444555@666", Initial Balance "1000", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "password1", Phone Number "444555@666", Initial Balance "1@", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user_1", the Password "", Phone Number "741-852-9630", Initial Balance "", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "Pass1234@", Phone Number "111222abcd", Initial Balance "5a", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user1", the Password "123456789", Phone Number "09876543210", Initial Balance "1@", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "ab", the Password "Pass1234@", Phone Number "741-852-9630", Initial Balance "3.141", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "exampleName", the Password "ppppppppppppppppppppp", Phone Number "+1-555-666-7777", Initial Balance "99999", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "alice@123", the Password "ppppppppppppppppppppp", Phone Number "09876543210", Initial Balance "0", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user_1", the Password "1234567", Phone Number "", Initial Balance "99999", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "exampleName", the Password "abcdefghi", Phone Number "111222abcd", Initial Balance "1@", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "testUser", the Password "SecureP@ss", Phone Number "", Initial Balance "", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "", the Password "password1", Phone Number "9876543210", Initial Balance "0", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "alice@123", the Password "SecureP@ss", Phone Number "741-852-9630", Initial Balance "-1", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "exampleName", the Password "SecureP@ss", Phone Number "123456789", Initial Balance "", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user_1", the Password "ppppppppppppppppppppp", Phone Number "9876543210", Initial Balance "1@", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "SecureP@ss", Phone Number "+1-555-666-7777", Initial Balance "1@", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "ab", the Password "1234567", Phone Number "123456789", Initial Balance "5a", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "alice@123", the Password "1234567", Phone Number "+1-555-666-7777", Initial Balance "1000", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "testUser", the Password "", Phone Number "+1-555-666-7777", Initial Balance "99999", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user1", the Password "", Phone Number "123456789", Initial Balance "1000", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "1234567", Phone Number "09876543210", Initial Balance "3.141", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "ab", the Password "password1", Phone Number "09876543210", Initial Balance "", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "alice@123", the Password "123456789", Phone Number "", Initial Balance "3.141", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "abcdefghi", Phone Number "741-852-9630", Initial Balance "0", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "ab", the Password "abcdefghi", Phone Number "+1-555-666-7777", Initial Balance "-1", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "testUser", the Password "ppppppppppppppppppppp", Phone Number "741-852-9630", Initial Balance "3.141", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "alice@123", the Password "", Phone Number "111222abcd", Initial Balance "0", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "ab", the Password "abcdefghi", Phone Number "444555@666", Initial Balance "99999", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "123456789", Phone Number "", Initial Balance "-1", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "", the Password "SecureP@ss", Phone Number "444555@666", Initial Balance "3.141", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "", the Password "", Phone Number "", Initial Balance "5a", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user_1", the Password "password1", Phone Number "+1-555-666-7777", Initial Balance "-1", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user1", the Password "1234567", Phone Number "444555@666", Initial Balance "", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "testUser", the Password "123456789", Phone Number "444555@666", Initial Balance "1@", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user_1", the Password "Pass1234@", Phone Number "444555@666", Initial Balance "", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "ab", the Password "SecureP@ss", Phone Number "123456789", Initial Balance "1@", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "exampleName", the Password "password1", Phone Number "", Initial Balance "1000", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "alice@123", the Password "password1", Phone Number "444555@666", Initial Balance "5a", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "SecureP@ss", Phone Number "+1-555-666-7777", Initial Balance "5a", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "abcdefghi", Phone Number "", Initial Balance "", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "ab", the Password "SecureP@ss", Phone Number "+1-555-666-7777", Initial Balance "0", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "ppppppppppppppppppppp", Phone Number "", Initial Balance "1000", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "testUser", the Password "123456789", Phone Number "111222abcd", Initial Balance "99999", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "AAAAAAAAAAAAAAAAAAAAA", the Password "", Phone Number "444555@666", Initial Balance "99999", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "exampleName", the Password "1234567", Phone Number "9876543210", Initial Balance "-1", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "", the Password "123456789", Phone Number "111222abcd", Initial Balance "0", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "ab", the Password "password1", Phone Number "741-852-9630", Initial Balance "1000", and then clicked "Register"
+Then fail to register
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/register"
+When I entered the Username "user_1", the Password "SecureP@ss", Phone Number "09876543210", Initial Balance "0", and then clicked "Register"
+Then fail to register
+----------------------------------------
+
+===== STATISTICS =====
+
+Generated 3 valid test cases
+Generated 75 invalid test cases
+Total 78 test cases
+========================================
+

@@ -1,0 +1,262 @@
+{
+    "Add tours": [
+        {
+            "Variable": "Tour Name",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 100 characters",
+                        "Including English",
+                        "It includes English and numbers",
+                        "It includes English letters, numbers and Spaces",
+                        "Allow hyphens",
+                        "Allow underlines"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "null character",
+                        "More than 100 characters",
+                        "Only punctuation marks are included"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Tour Description",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "0 to 1000 characters",
+                        "Including English",
+                        "It includes English and numbers",
+                        "It includes English letters, numbers and Spaces",
+                        "Support line breaks"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "More than 1000 characters",
+                        "Contains '; Malicious fragments such as DROP TABLE",
+                        "Contains non-UTF-8 encoded characters"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Tour Price",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "A number greater than 0",
+                        "integer",
+                        "keep two decimals",
+                        "The price is 0"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "minus",
+                        "Containing letters",
+                        "More than two decimal places",
+                        "Incorporating symbols"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Tour Capacity",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 50 people",
+                        "It must be an integer",
+                        "0 people (indicating no limit or sold out)"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "minus",
+                        "decimal",
+                        "Containing letters",
+                        "Incorporating symbols"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Modified tours": [
+        {
+            "Variable": "Tour Name",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 100 characters",
+                        "Including English",
+                        "It includes English and numbers",
+                        "It includes English letters, numbers and Spaces",
+                        "Allow hyphens",
+                        "Allow underlines"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "null character",
+                        "More than 100 characters",
+                        "Only punctuation marks are included"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Tour Description",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "0 to 1000 characters",
+                        "Including English",
+                        "It includes English and numbers",
+                        "It includes English letters, numbers and Spaces",
+                        "Support line breaks"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "More than 1000 characters",
+                        "Contains '; Malicious fragments such as DROP TABLE",
+                        "Contains non-UTF-8 encoded characters"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Tour Price",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "A number greater than 0",
+                        "integer",
+                        "keep two decimals",
+                        "The price is 0"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "minus",
+                        "Containing letters",
+                        "More than two decimal places",
+                        "Incorporating symbols"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "Tour Capacity",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 50 people",
+                        "It must be an integer",
+                        "0 people (indicating no limit or sold out)"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "minus",
+                        "decimal",
+                        "Containing letters",
+                        "Incorporating symbols"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Delete tours": [
+        {
+            "Variable": "Tour Name",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 100 characters",
+                        "Including English",
+                        "It includes English and numbers",
+                        "It includes English letters, numbers and Spaces",
+                        "Allow hyphens",
+                        "Allow underlines"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "null character",
+                        "More than 100 characters",
+                        "Only punctuation marks are included"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Reserve tours": [
+        {
+            "Variable": "Tour Name",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 100 characters",
+                        "Including English",
+                        "It includes English and numbers",
+                        "It includes English letters, numbers and Spaces",
+                        "Allow hyphens",
+                        "Allow underlines"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "null character",
+                        "More than 100 characters",
+                        "Only punctuation marks are included"
+                    ]
+                }
+            ]
+        },
+        {
+            "Variable": "guest",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 10 people (usually individual booking limit)",
+                        "The number of reservations <= remaining inventory"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "minus",
+                        "0",
+                        "Exceeding the single booking limit (e.g., >10)",
+                        "decimal"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Search tours": [
+        {
+            "Variable": "guest",
+            "Equivalence partitioning": [
+                {
+                    "Valid equivalence class": [
+                        "1 to 10 people (usually individual booking limit)",
+                        "The number of reservations <= remaining inventory"
+                    ]
+                },
+                {
+                    "Invalid equivalence class": [
+                        "minus",
+                        "0",
+                        "Exceeding the single booking limit (e.g., >10)",
+                        "decimal"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,513 @@
+D:\ProgramData\anaconda3\envs\TEST\python.exe C:\Users\DELL\Desktop\Test_Gherkin\draft_first\metamorphosis_test2.py
+
+Assistant:
+ {
+    "first name": ["John", "Anne-Marie", "O'Connor", "M.J.", "Al"],
+    "last name": ["Smith", "O'Brien", "Smith-Doe", "Mac Dowell", "St. James"],
+    "city": ["NewYork", "San Francisco", "Los-Angeles", "Albany", "Bo"],
+    "address": ["412 Main Street", "1234 Elm St.", "432 #2nd Ave", "5678-Third Place", "91 Seventh St."],
+    "telephone": ["6095916230", "609-591-6230", "609.591.6230", "2019956321", "2123334444"]
+}
+
+Assistant:
+ {
+    "first name": ["John123", "John@Doe", "", "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe"],
+    "last name": ["Smith123", "Smith@", "", "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", "forSmith"],
+    "city": ["NewYork123", "New@York", "", "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", "Atlantis"],
+    "address": ["Main Street", "MainStreet!", "", "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", "MainStreetNoSpaces"],
+    "telephone": ["60959", "6095916230123", "6095nine1623", "60959@16230"]
+}
+已成功生成 output.csv 文件
+Test case combination：
+<csv.DictReader object at 0x0000017ABA2C6C90>
+
+===== VALID=====
+
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "St. James" , address "91 Seventh St.", city "Los-Angeles", and telephone "609.591.6230" as a new pet owner
+Then "John St. James" is an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "Mac Dowell" , address "412 Main Street", city "Los-Angeles", and telephone "2019956321" as a new pet owner
+Then "Anne-Marie Mac Dowell" is an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "St. James" , address "1234 Elm St.", city "Albany", and telephone "2019956321" as a new pet owner
+Then "Al St. James" is an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "Mac Dowell" , address "432 #2nd Ave", city "Albany", and telephone "609.591.6230" as a new pet owner
+Then "O'Connor Mac Dowell" is an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "Smith" , address "5678-Third Place", city "NewYork", and telephone "609.591.6230" as a new pet owner
+Then "Al Smith" is an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "Smith-Doe" , address "432 #2nd Ave", city "San Francisco", and telephone "2123334444" as a new pet owner
+Then "Al Smith-Doe" is an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "O'Brien" , address "1234 Elm St.", city "Albany", and telephone "6095916230" as a new pet owner
+Then "M.J. O'Brien" is an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "O'Brien" , address "1234 Elm St.", city "Albany", and telephone "609-591-6230" as a new pet owner
+Then "Anne-Marie O'Brien" is an owner
+----------------------------------------
+
+===== INVALID=====
+
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "MainStreetNoSpaces", city "Albany", and telephone "6095916230123" as a new pet owner
+Then "John@Doe SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "" and last name "Smith-Doe", address "", city "NewYork", and telephone "609-591-6230" as a new pet owner
+Then " Smith-Doe" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "O'Brien", address "Main Street", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "6095916230" as a new pet owner
+Then "John123 O'Brien" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "Smith@", address "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "6095916230123" as a new pet owner
+Then "M.J. Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "Smith@", address "5678-Third Place", city "", and telephone "609.591.6230" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "Smith@", address "412 Main Street", city "Atlantis", and telephone "2123334444" as a new pet owner
+Then "Al Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "91 Seventh St.", city "Bo", and telephone "6095916230" as a new pet owner
+Then "O'Connor SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "St. James", address "432 #2nd Ave", city "San Francisco", and telephone "6095nine1623" as a new pet owner
+Then "John@Doe St. James" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "Smith123", address "MainStreet!", city "Bo", and telephone "60959" as a new pet owner
+Then "John123 Smith123" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "", address "5678-Third Place", city "San Francisco", and telephone "609-591-6230" as a new pet owner
+Then "John " is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "Smith", address "Main Street", city "Los-Angeles", and telephone "60959@16230" as a new pet owner
+Then "O'Connor Smith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "" and last name "forSmith", address "5678-Third Place", city "Atlantis", and telephone "6095916230" as a new pet owner
+Then " forSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "O'Brien", address "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", city "Atlantis", and telephone "6095nine1623" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe O'Brien" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "MainStreet!", city "San Francisco", and telephone "2019956321" as a new pet owner
+Then "M.J. SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "Smith", address "1234 Elm St.", city "Atlantis", and telephone "609.591.6230" as a new pet owner
+Then "Anne-Marie Smith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "St. James", address "MainStreetNoSpaces", city "Atlantis", and telephone "60959@16230" as a new pet owner
+Then "John123 St. James" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "O'Brien", address "", city "San Francisco", and telephone "60959@16230" as a new pet owner
+Then "Al O'Brien" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "", address "432 #2nd Ave", city "NewYork", and telephone "6095916230" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe " is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "1234 Elm St.", city "NewYork123", and telephone "60959" as a new pet owner
+Then " SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "forSmith", address "", city "", and telephone "2019956321" as a new pet owner
+Then "John@Doe forSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "Smith-Doe", address "MainStreetNoSpaces", city "Bo", and telephone "2123334444" as a new pet owner
+Then "Anne-Marie Smith-Doe" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "Smith123", address "432 #2nd Ave", city "Atlantis", and telephone "6095916230123" as a new pet owner
+Then "John Smith123" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "Smith", address "MainStreet!", city "NewYork123", and telephone "6095916230" as a new pet owner
+Then "John@Doe Smith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "Smith-Doe", address "5678-Third Place", city "Los-Angeles", and telephone "6095nine1623" as a new pet owner
+Then "M.J. Smith-Doe" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "forSmith", address "412 Main Street", city "Bo", and telephone "60959@16230" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe forSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "", address "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", city "New@York", and telephone "609.591.6230" as a new pet owner
+Then "O'Connor " is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "Smith", address "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", city "Bo", and telephone "2019956321" as a new pet owner
+Then "John Smith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "Smith-Doe", address "Main Street", city "New@York", and telephone "6095916230123" as a new pet owner
+Then "Al Smith-Doe" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "Smith-Doe", address "91 Seventh St.", city "", and telephone "60959" as a new pet owner
+Then "John123 Smith-Doe" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "" and last name "Smith", address "MainStreetNoSpaces", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "6095nine1623" as a new pet owner
+Then " Smith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "", address "412 Main Street", city "Albany", and telephone "60959" as a new pet owner
+Then "M.J. " is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "412 Main Street", city "NewYork", and telephone "6095nine1623" as a new pet owner
+Then "John123 SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "", address "MainStreet!", city "", and telephone "6095nine1623" as a new pet owner
+Then "Anne-Marie " is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "Smith123", address "412 Main Street", city "", and telephone "609-591-6230" as a new pet owner
+Then "O'Connor Smith123" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "Mac Dowell", address "Main Street", city "Bo", and telephone "609-591-6230" as a new pet owner
+Then "M.J. Mac Dowell" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "Smith-Doe", address "1234 Elm St.", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "2019956321" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe Smith-Doe" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "" and last name "Mac Dowell", address "91 Seventh St.", city "San Francisco", and telephone "2123334444" as a new pet owner
+Then " Mac Dowell" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "Smith123", address "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", city "San Francisco", and telephone "6095916230" as a new pet owner
+Then "Anne-Marie Smith123" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "Smith123", address "", city "NewYork123", and telephone "609.591.6230" as a new pet owner
+Then "M.J. Smith123" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "forSmith", address "91 Seventh St.", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "609-591-6230" as a new pet owner
+Then "Al forSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "Smith@", address "", city "Bo", and telephone "60959" as a new pet owner
+Then "John@Doe Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "", address "91 Seventh St.", city "Atlantis", and telephone "60959@16230" as a new pet owner
+Then "John@Doe " is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "St. James", address "5678-Third Place", city "Bo", and telephone "6095916230123" as a new pet owner
+Then "O'Connor St. James" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "O'Brien", address "1234 Elm St.", city "New@York", and telephone "2123334444" as a new pet owner
+Then "John O'Brien" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "Smith@", address "MainStreetNoSpaces", city "NewYork", and telephone "2019956321" as a new pet owner
+Then "O'Connor Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "Smith123", address "5678-Third Place", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "2123334444" as a new pet owner
+Then "John@Doe Smith123" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "Mac Dowell", address "91 Seventh St.", city "NewYork123", and telephone "6095916230123" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe Mac Dowell" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "Smith", address "432 #2nd Ave", city "New@York", and telephone "609-591-6230" as a new pet owner
+Then "John123 Smith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "Smith-Doe", address "412 Main Street", city "NewYork123", and telephone "60959@16230" as a new pet owner
+Then "John Smith-Doe" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "Mac Dowell", address "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", city "NewYork", and telephone "60959" as a new pet owner
+Then "Al Mac Dowell" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "" and last name "St. James", address "412 Main Street", city "New@York", and telephone "6095916230" as a new pet owner
+Then " St. James" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "Mac Dowell", address "5678-Third Place", city "Albany", and telephone "60959@16230" as a new pet owner
+Then "John123 Mac Dowell" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "Smith-Doe", address "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", city "Los-Angeles", and telephone "609-591-6230" as a new pet owner
+Then "John@Doe Smith-Doe" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "" and last name "Smith-Doe", address "MainStreet!", city "Albany", and telephone "609.591.6230" as a new pet owner
+Then " Smith-Doe" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "Smith", address "", city "Albany", and telephone "2123334444" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe Smith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "Smith@", address "Main Street", city "NewYork123", and telephone "6095nine1623" as a new pet owner
+Then "Anne-Marie Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "Smith", address "1234 Elm St.", city "", and telephone "60959@16230" as a new pet owner
+Then "M.J. Smith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "Main Street", city "", and telephone "2123334444" as a new pet owner
+Then "John SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "Smith", address "412 Main Street", city "San Francisco", and telephone "6095916230123" as a new pet owner
+Then "John123 Smith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "Mac Dowell", address "1234 Elm St.", city "New@York", and telephone "6095nine1623" as a new pet owner
+Then "John@Doe Mac Dowell" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "O'Brien", address "91 Seventh St.", city "NewYork", and telephone "6095916230123" as a new pet owner
+Then "Anne-Marie O'Brien" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "forSmith", address "1234 Elm St.", city "San Francisco", and telephone "60959" as a new pet owner
+Then "O'Connor forSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "" and last name "Smith123", address "Main Street", city "Los-Angeles", and telephone "2019956321" as a new pet owner
+Then " Smith123" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "60959@16230" as a new pet owner
+Then "Anne-Marie SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "" and last name "O'Brien", address "432 #2nd Ave", city "", and telephone "2019956321" as a new pet owner
+Then " O'Brien" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "forSmith", address "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", city "NewYork123", and telephone "2123334444" as a new pet owner
+Then "John123 forSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "forSmith", address "Main Street", city "Albany", and telephone "6095nine1623" as a new pet owner
+Then "John forSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "Smith-Doe", address "MainStreet!", city "Atlantis", and telephone "609-591-6230" as a new pet owner
+Then "O'Connor Smith-Doe" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "", address "", city "Los-Angeles", and telephone "6095916230123" as a new pet owner
+Then "John123 " is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "forSmith", address "MainStreetNoSpaces", city "New@York", and telephone "609.591.6230" as a new pet owner
+Then "M.J. forSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "", address "MainStreetNoSpaces", city "NewYork123", and telephone "609-591-6230" as a new pet owner
+Then "Al " is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "O'Brien", address "5678-Third Place", city "Los-Angeles", and telephone "60959" as a new pet owner
+Then "Al O'Brien" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "Smith123", address "MainStreetNoSpaces", city "New@York", and telephone "60959" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe Smith123" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "forSmith", address "432 #2nd Ave", city "Los-Angeles", and telephone "60959" as a new pet owner
+Then "Anne-Marie forSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "Smith@", address "", city "New@York", and telephone "6095916230" as a new pet owner
+Then "John Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "St. James", address "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", city "NewYork", and telephone "2123334444" as a new pet owner
+Then "M.J. St. James" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "O'Brien", address "412 Main Street", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "609.591.6230" as a new pet owner
+Then "O'Connor O'Brien" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "Smith123", address "1234 Elm St.", city "NewYork", and telephone "60959@16230" as a new pet owner
+Then "John123 Smith123" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "St. James", address "Main Street", city "San Francisco", and telephone "609.591.6230" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe St. James" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "" and last name "", address "1234 Elm St.", city "Bo", and telephone "6095916230123" as a new pet owner
+Then " " is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", city "", and telephone "6095916230" as a new pet owner
+Then "Al SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "432 #2nd Ave", city "Atlantis", and telephone "60959@16230" as a new pet owner
+Then "M.J. SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "", address "Main Street", city "Atlantis", and telephone "2019956321" as a new pet owner
+Then "John@Doe " is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "Mac Dowell", address "MainStreetNoSpaces", city "San Francisco", and telephone "6095916230" as a new pet owner
+Then "John Mac Dowell" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "Smith@", address "MainStreet!", city "Los-Angeles", and telephone "2123334444" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "St. James", address "MainStreet!", city "", and telephone "609-591-6230" as a new pet owner
+Then "Anne-Marie St. James" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "M.J." and last name "Smith@", address "91 Seventh St.", city "Albany", and telephone "609-591-6230" as a new pet owner
+Then "M.J. Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "MainStreetNoSpaces", city "Los-Angeles", and telephone "609.591.6230" as a new pet owner
+Then "John123 SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "" and last name "Smith@", address "MainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreetMainStreet", city "Albany", and telephone "60959@16230" as a new pet owner
+Then " Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "St. James", address "MainStreet!", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "60959" as a new pet owner
+Then "John St. James" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "Mac Dowell", address "", city "Atlantis", and telephone "6095nine1623" as a new pet owner
+Then "O'Connor Mac Dowell" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "Smith123", address "91 Seventh St.", city "Albany", and telephone "6095nine1623" as a new pet owner
+Then "Al Smith123" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "5678-Third Place", city "NewYork123", and telephone "2019956321" as a new pet owner
+Then "O'Connor SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "forSmith", address "MainStreet!", city "NewYork", and telephone "6095916230123" as a new pet owner
+Then "John@Doe forSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "St. James", address "432 #2nd Ave", city "NewYork123", and telephone "609-591-6230" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe St. James" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "Main Street", city "NewYork", and telephone "609-591-6230" as a new pet owner
+Then "John SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "Mac Dowell", address "MainStreet!", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "60959@16230" as a new pet owner
+Then "Al Mac Dowell" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Al" and last name "O'Brien", address "432 #2nd Ave", city "Bo", and telephone "6095nine1623" as a new pet owner
+Then "Al O'Brien" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "Smith@", address "1234 Elm St.", city "Los-Angeles", and telephone "6095916230" as a new pet owner
+Then "John123 Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "O'Brien", address "MainStreet!", city "New@York", and telephone "60959@16230" as a new pet owner
+Then "John@Doe O'Brien" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Anne-Marie" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "5678-Third Place", city "New@York", and telephone "2019956321" as a new pet owner
+Then "Anne-Marie SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "O'Brien", address "MainStreetNoSpaces", city "NewYork123", and telephone "2019956321" as a new pet owner
+Then "John123 O'Brien" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "O'Connor" and last name "Mac Dowell", address "MainStreetNoSpaces", city "", and telephone "2123334444" as a new pet owner
+Then "O'Connor Mac Dowell" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "St. James", address "", city "", and telephone "6095916230123" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe St. James" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John123" and last name "", address "432 #2nd Ave", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "2123334444" as a new pet owner
+Then "John123 " is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "Smith", address "Main Street", city "Atlantis", and telephone "60959" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe Smith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "Smith", address "91 Seventh St.", city "New@York", and telephone "609.591.6230" as a new pet owner
+Then "John@Doe Smith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "Smith@", address "91 Seventh St.", city "San Francisco", and telephone "2019956321" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "Smith@", address "432 #2nd Ave", city "Bo", and telephone "609.591.6230" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe Smith@" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe" and last name "SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith", address "MainStreetNoSpaces", city "NewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYorkNewYork", and telephone "609-591-6230" as a new pet owner
+Then "JohndoeJohndoeJohndoeJohndoeJohndoeJohndoeJohndoe SmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmithSmith" is not an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John@Doe" and last name "Smith-Doe", address "412 Main Street", city "NewYork", and telephone "6095916230" as a new pet owner
+Then "John@Doe Smith-Doe" is not an owner
+----------------------------------------
+
+===== STATISTICS =====
+
+Generated 8 valid test cases
+Generated 111 invalid test cases
+Total 119 test cases
+========================================
+
+进程已结束，退出代码为 0

@@ -1,0 +1,490 @@
+D:\ProgramData\anaconda3\envs\TEST\python.exe C:\Users\DELL\Desktop\WebMAC\metamorphosis.py
+
+Assistant:
+ {'Name': ['Lisa-Marie', "Chris O'Brien", 'Jean-Luc', 'R.J.'], 'Last Name': ["O'Neill", 'Smith-Jones', 'Mac Namara', 'van der Waals'], 'Email': ['johndoe@yahoo.com', 'email@sub.domain.com', 'name123@mail.com', 'user@domain.org'], 'Password': ['P@ssw0rd', 'Abc12345', '9Le@dsXQW!', 'simplepass'], 'Username': ['user_name_01', 'user123', 'username20', 'simpleUser']}
+
+Assistant:
+ {'Name': ['john123', 'john@@@', '', 'jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj'], 'Last Name': ['smith1', 'smith@#', '', 'sssssssssssssssssssssssssssssssssssssssssssssssssss', 'onthe'], 'Email': ['johngmail.com', 'john@', 'john..gmail.com', 'john@g.c'], 'Password': ['1234567', '111111111111111111111', 'abcdefgh', '1234567890', ' '], 'Username': ['abc@#', 'ab', 'uuuuuuuuuuuuuuuuuuuuu', ' ']}
+已成功生成 output.csv 文件
+Test case combination：
+<csv.DictReader object at 0x0000026EF9860C50>
+
+===== VALID=====
+
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Jean-Luc", Last Name "Mac Namara", Email "user@domain.org", Password "P@ssw0rd", and Username "user123"
+    Then registered successfully
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "Mac Namara", Email "name123@mail.com", Password "simplepass", and Username "username20"
+    Then registered successfully
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "Mac Namara", Email "user@domain.org", Password "9Le@dsXQW!", and Username "user123"
+    Then registered successfully
+----------------------------------------
+
+===== INVALID=====
+
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "R.J.", Last Name "Mac Namara", Email "john@g.c", Password "1234567", and Username " "
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "van der Waals", Email "name123@mail.com", Password "Abc12345", and Username "user123"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Jean-Luc", Last Name "onthe", Email "john@", Password "simplepass", and Username "user_name_01"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "O'Neill", Email "johngmail.com", Password "111111111111111111111", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "sssssssssssssssssssssssssssssssssssssssssssssssssss", Email "user@domain.org", Password " ", and Username "abc@#"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "", Email "john@g.c", Password "9Le@dsXQW!", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "Smith-Jones", Email "john..gmail.com", Password "1234567", and Username "username20"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john@@@", Last Name "", Email "user@domain.org", Password "111111111111111111111", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "Mac Namara", Email "johndoe@yahoo.com", Password "abcdefgh", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Jean-Luc", Last Name "smith1", Email "johngmail.com", Password "1234567", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "van der Waals", Email "johndoe@yahoo.com", Password "P@ssw0rd", and Username "user_name_01"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "smith@#", Email "user@domain.org", Password "simplepass", and Username "username20"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "smith@#", Email "johndoe@yahoo.com", Password "111111111111111111111", and Username " "
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "R.J.", Last Name "sssssssssssssssssssssssssssssssssssssssssssssssssss", Email "john@", Password "9Le@dsXQW!", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john@@@", Last Name "smith1", Email "email@sub.domain.com", Password "abcdefgh", and Username "user123"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "R.J.", Last Name "smith@#", Email "john..gmail.com", Password "Abc12345", and Username "abc@#"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "onthe", Email "john..gmail.com", Password "1234567890", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "smith@#", Email "john@", Password "P@ssw0rd", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john@@@", Last Name "onthe", Email "name123@mail.com", Password "P@ssw0rd", and Username "username20"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "onthe", Email "johngmail.com", Password "Abc12345", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "", Email "email@sub.domain.com", Password "P@ssw0rd", and Username "abc@#"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "sssssssssssssssssssssssssssssssssssssssssssssssssss", Email "email@sub.domain.com", Password "1234567", and Username "user_name_01"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "Smith-Jones", Email "john@", Password "Abc12345", and Username " "
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "smith1", Email "name123@mail.com", Password " ", and Username "user_name_01"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "sssssssssssssssssssssssssssssssssssssssssssssssssss", Email "johngmail.com", Password "simplepass", and Username " "
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john@@@", Last Name "O'Neill", Email "johndoe@yahoo.com", Password "9Le@dsXQW!", and Username "abc@#"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "smith1", Email "john..gmail.com", Password "9Le@dsXQW!", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Jean-Luc", Last Name "van der Waals", Email "john@g.c", Password "111111111111111111111", and Username "username20"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "Smith-Jones", Email "name123@mail.com", Password "abcdefgh", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "R.J.", Last Name "Smith-Jones", Email "john@g.c", Password "P@ssw0rd", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "smith@#", Email "email@sub.domain.com", Password "abcdefgh", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "R.J.", Last Name "onthe", Email "johngmail.com", Password "abcdefgh", and Username "user123"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "sssssssssssssssssssssssssssssssssssssssssssssssssss", Email "john..gmail.com", Password "P@ssw0rd", and Username "user123"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "smith1", Email "john@g.c", Password "P@ssw0rd", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "", Email "name123@mail.com", Password "1234567890", and Username " "
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john@@@", Last Name "van der Waals", Email "john..gmail.com", Password "simplepass", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "Mac Namara", Email "john..gmail.com", Password "111111111111111111111", and Username "user_name_01"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "smith1", Email "user@domain.org", Password "Abc12345", and Username "username20"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "van der Waals", Email "john@", Password "1234567", and Username "abc@#"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "van der Waals", Email "john@g.c", Password "abcdefgh", and Username "abc@#"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Jean-Luc", Last Name "sssssssssssssssssssssssssssssssssssssssssssssssssss", Email "johndoe@yahoo.com", Password "Abc12345", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "R.J.", Last Name "smith1", Email "johndoe@yahoo.com", Password "1234567890", and Username "username20"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "smith1", Email "john@", Password "111111111111111111111", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john@@@", Last Name "smith@#", Email "name123@mail.com", Password "1234567", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "O'Neill", Email "email@sub.domain.com", Password "P@ssw0rd", and Username " "
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Jean-Luc", Last Name "Smith-Jones", Email "email@sub.domain.com", Password "111111111111111111111", and Username "abc@#"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "onthe", Email "johngmail.com", Password "9Le@dsXQW!", and Username "abc@#"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "onthe", Email "johndoe@yahoo.com", Password "1234567", and Username "user123"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "smith@#", Email "johngmail.com", Password " ", and Username "username20"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john@@@", Last Name "sssssssssssssssssssssssssssssssssssssssssssssssssss", Email "john@g.c", Password "1234567890", and Username "user_name_01"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "sssssssssssssssssssssssssssssssssssssssssssssssssss", Email "name123@mail.com", Password "abcdefgh", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Jean-Luc", Last Name "smith@#", Email "john@", Password "1234567890", and Username "user123"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "onthe", Email "johndoe@yahoo.com", Password " ", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "O'Neill", Email "email@sub.domain.com", Password "1234567890", and Username "username20"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Jean-Luc", Last Name "", Email "john..gmail.com", Password "abcdefgh", and Username " "
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "R.J.", Last Name "Smith-Jones", Email "user@domain.org", Password "simplepass", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "O'Neill", Email "john@", Password "simplepass", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "", Email "johndoe@yahoo.com", Password "simplepass", and Username "user123"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john@@@", Last Name "Mac Namara", Email "john@", Password " ", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "R.J.", Last Name "van der Waals", Email "email@sub.domain.com", Password " ", and Username " "
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "", Email "john@g.c", Password " ", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "R.J.", Last Name "sssssssssssssssssssssssssssssssssssssssssssssssssss", Email "name123@mail.com", Password "111111111111111111111", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "smith1", Email "name123@mail.com", Password "simplepass", and Username "abc@#"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "Smith-Jones", Email "johndoe@yahoo.com", Password " ", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "R.J.", Last Name "", Email "johngmail.com", Password "Abc12345", and Username "user_name_01"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "O'Neill", Email "user@domain.org", Password "abcdefgh", and Username "user_name_01"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "", Email "john@", Password "abcdefgh", and Username "username20"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "onthe", Email "john@g.c", Password "111111111111111111111", and Username "user123"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john@@@", Last Name "Smith-Jones", Email "johngmail.com", Password "9Le@dsXQW!", and Username " "
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Jean-Luc", Last Name "O'Neill", Email "name123@mail.com", Password "9Le@dsXQW!", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "O'Neill", Email "john..gmail.com", Password " ", and Username "user123"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "smith1", Email "user@domain.org", Password "1234567890", and Username " "
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "O'Neill", Email "john@g.c", Password "Abc12345", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "Mac Namara", Email "email@sub.domain.com", Password "1234567890", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "Mac Namara", Email "johngmail.com", Password "1234567890", and Username "abc@#"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "smith@#", Email "john@g.c", Password "9Le@dsXQW!", and Username "user_name_01"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "van der Waals", Email "user@domain.org", Password "Abc12345", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Jean-Luc", Last Name "van der Waals", Email "email@sub.domain.com", Password " ", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "Smith-Jones", Email "john@", Password "1234567890", and Username "user123"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "", Email "user@domain.org", Password "1234567", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "van der Waals", Email "email@sub.domain.com", Password "9Le@dsXQW!", and Username "username20"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj", Last Name "sssssssssssssssssssssssssssssssssssssssssssssssssss", Email "john@g.c", Password "simplepass", and Username "username20"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "R.J.", Last Name "O'Neill", Email "user@domain.org", Password "1234567", and Username "uuuuuuuuuuuuuuuuuuuuu"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Chris O'Brien", Last Name "van der Waals", Email "johngmail.com", Password "P@ssw0rd", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "Lisa-Marie", Last Name "van der Waals", Email "user@domain.org", Password "1234567890", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john@@@", Last Name "onthe", Email "email@sub.domain.com", Password "Abc12345", and Username " "
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "Mac Namara", Email "name123@mail.com", Password "Abc12345", and Username "ab"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "", Last Name "onthe", Email "user@domain.org", Password "111111111111111111111", and Username "simpleUser"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "Smith-Jones", Email "john..gmail.com", Password " ", and Username "user_name_01"
+    Then registration failed
+----------------------------------------
+Scenario: register account
+    Given this is the current URL: "http://localhost:8090/registration"
+    When I registered an account with the Name "john123", Last Name "smith1", Email "email@sub.domain.com", Password "simplepass", and Username "user_name_01"
+    Then registration failed
+----------------------------------------
+
+===== STATISTICS =====
+
+Generated 3 valid test cases
+Generated 90 invalid test cases
+Total 93 test cases
+========================================
+
+
