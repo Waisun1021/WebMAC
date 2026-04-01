@@ -50,14 +50,14 @@ test_cases = replace_var_to_template(csv_file, true_template, false_template, va
 ### 3. Testing module (test.py)
 
 #### Description
-Testing module负责执行测试用例。它使用Coder、Executor和Analyst三个代理来编写测试代码、执行测试并分析结果。
+The Testing module is responsible for executing test cases. It uses three agents - Coder, Executor and Analyst - to write test code, execute tests and analyze results.
 
 #### Input
-- `base_model`: 使用的LLM模型名称（默认 "gpt-3.5-turbo-0125"）
-- `execution_config`: 执行配置字典（可选）
-- `summary_method`: 摘要方法（默认 "reflection_with_llm"）
-- `max_round`: 最大对话轮数（默认 50）
-- 测试场景描述
+- `base_model`: Name of the LLM model used
+- `execution_config`: Dictionary of execution configurations
+- `summary_method`: Summary method
+- `max_round`: Maximum number of conversation rounds
+- Test scenario description
 
 #### Usage
 ```python
