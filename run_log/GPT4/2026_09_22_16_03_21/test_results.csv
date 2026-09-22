@@ -1,0 +1,4 @@
+test_case,test_result
+"The following is a scenario template: Given this is the current URL: ""http://localhost:8080/owners/new""
+When I add a person with first name ""Sarah"", last name ""Johnson"", address ""1234 Elm Street Apt 567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"", city ""San Francisco"", and telephone ""123-456-7890"" as a new pet owner
+Then ""Sarah Johnson"" is not an owner",<model.chat.Chat object at 0x000002308B0AD490>

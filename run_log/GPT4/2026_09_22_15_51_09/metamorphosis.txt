@@ -1,0 +1,28 @@
+
+Assistant:
+ {
+    "firstName": ["John", "Jane", "Alice", "Bob", "Zoë"],
+    "lastName": ["Smith", "Johnson", "O'Neil", "Lee", "García"],
+    "address": ["123A Main St.", "45-B Elm Street", "789 #5 Maple Ave", "1C Oak Rd", "9999 W. Sunset Blvd."],
+    "city": ["New York", "Los Angeles", "San Francisco", "St. Louis", "Niagara Falls"],
+    "telephone": ["1234567890", "415-555-1234", "(212) 555-6789", "202.555.9876", "303 555 3456"]
+}
+
+Assistant:
+ {
+  "firstName": ["John"],
+  "lastName": ["Smith"],
+  "address": ["Elm Street", "@Main St!", "", "1234 Elm Street Apartment 5678 Building 9 Floor 10 Suite 101112", "ElmStreetWithoutSpaces"],
+  "city": ["New York 123", "Los#Angeles$", "", "AReallyLongCityNameThatExceedsFiftyCharactersJustToTestTheLimit", "Atlantis"],
+  "telephone": ["123456789", "123456789012", "12345abcde", "123-456-7890"]
+}
+已成功生成 output.csv 文件
+Test case combination：
+<csv.DictReader object at 0x000001EE6AE88A50>
+
+===== STATISTICS =====
+
+Generated 0 valid test cases
+Generated 0 invalid test cases
+Total 0 test cases
+========================================

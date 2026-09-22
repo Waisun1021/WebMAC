@@ -1,0 +1,570 @@
+
+Assistant:
+ {
+    "firstName": ["John", "Jonathan", "Jo", "J", "Johann"],
+    "lastName": ["Smith", "O'Neil", "Van-Dyke", "Lee", "McDonald"],
+    "address": ["123A Elm St.", "9-B Pine Rd", "100# Maple Avenue", "5 W. Oak Blvd", "6789 North 5th St."],
+    "city": ["New York", "Los Angeles", "St. Louis", "San Francisco", "Co-Op City"],
+    "telephone": ["6095916230", "609-591-6230", "609.591.6230", "(609)5916230", "2125551234"]
+}
+
+Assistant:
+ {
+  "firstName": ["Mary", "Alice", "Robert"],
+  "lastName": ["Johnson", "Williams", "Brown"],
+  "address": ["Broadway Avenue", "1st Ave @ Central Park", " ", "123 Elm Street with a very very very very very very very very very very very very very very very very long address", "LongAddressWithoutSpaces1234567890"],
+  "city": ["Dallas2", "Phoenix@", " ", "ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem", "Atlantis"],
+  "telephone": ["1234567", "1234567890123", "12345abcde", "123-456-7890"]
+}
+已成功生成 output.csv，共 107 筆組合
+Test case combination：
+address,firstName,city,lastName,telephone
+LongAddressWithoutSpaces1234567890,J,Los Angeles,Smith,609-591-6230
+ ,Robert,San Francisco,O'Neil,123-456-7890
+ ,J,Co-Op City,McDonald,609.591.6230
+123A Elm St.,Robert,Atlantis,Van-Dyke,1234567
+9-B Pine Rd,Jo,Phoenix@,Williams,12345abcde
+123A Elm St.,John,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Johnson,1234567890123
+100# Maple Avenue,Johann, ,Brown,(609)5916230
+6789 North 5th St.,John,Dallas2,Lee,2125551234
+100# Maple Avenue,Alice,Co-Op City,Lee,6095916230
+Broadway Avenue,Johann,Los Angeles,McDonald,6095916230
+5 W. Oak Blvd,Jonathan, ,O'Neil,1234567890123
+1st Ave @ Central Park,Robert,Dallas2,Williams,609-591-6230
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Alice,San Francisco,Brown,2125551234
+9-B Pine Rd,Alice,New York,Van-Dyke,(609)5916230
+Broadway Avenue,John,Atlantis,Smith,609.591.6230
+LongAddressWithoutSpaces1234567890,Johann,Phoenix@,Johnson,1234567
+6789 North 5th St.,Alice, ,McDonald,123-456-7890
+123A Elm St.,Jonathan,New York,Lee,12345abcde
+100# Maple Avenue,John,Los Angeles,Van-Dyke,12345abcde
+9-B Pine Rd,J,Dallas2,O'Neil,6095916230
+5 W. Oak Blvd,Alice,Dallas2,Smith,1234567
+6789 North 5th St.,Jo,San Francisco,Johnson,(609)5916230
+LongAddressWithoutSpaces1234567890,Mary,San Francisco,Williams,609.591.6230
+ ,Mary,Phoenix@,Brown,1234567890123
+1st Ave @ Central Park,Jo,Co-Op City,Van-Dyke,2125551234
+5 W. Oak Blvd,Jo,Los Angeles,Brown,123-456-7890
+123A Elm St.,Mary,Phoenix@,McDonald,609-591-6230
+ ,John,New York,Johnson,609-591-6230
+123A Elm St.,Jo,Dallas2,Brown,609.591.6230
+6789 North 5th St.,Mary,St. Louis,O'Neil,1234567
+1st Ave @ Central Park,Jonathan,Phoenix@,Smith,123-456-7890
+100# Maple Avenue,J,New York,Williams,2125551234
+123A Elm St.,Robert,Co-Op City,Smith,(609)5916230
+Broadway Avenue,Robert,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Brown,12345abcde
+5 W. Oak Blvd,Mary,Atlantis,Johnson,6095916230
+Broadway Avenue,Jo, ,Lee,1234567
+6789 North 5th St.,Johann,Atlantis,Williams,1234567890123
+ ,Jonathan,Dallas2,Lee,(609)5916230
+LongAddressWithoutSpaces1234567890,Jonathan,Dallas2,McDonald,12345abcde
+9-B Pine Rd,J,San Francisco,Lee,1234567890123
+5 W. Oak Blvd,Johann,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,McDonald,2125551234
+100# Maple Avenue,Jo,Atlantis,O'Neil,123-456-7890
+LongAddressWithoutSpaces1234567890,Jo,New York,Brown,6095916230
+Broadway Avenue,J,New York,Johnson,123-456-7890
+LongAddressWithoutSpaces1234567890,Jonathan,St. Louis,Van-Dyke,2125551234
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Johann,St. Louis,Lee,609-591-6230
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Alice,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,O'Neil,609.591.6230
+1st Ave @ Central Park,Alice,Los Angeles,Johnson,1234567890123
+LongAddressWithoutSpaces1234567890,John,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Williams,(609)5916230
+ ,Johann, ,Smith,12345abcde
+Broadway Avenue,Jonathan,San Francisco,Van-Dyke,609-591-6230
+5 W. Oak Blvd,J,St. Louis,Van-Dyke,609.591.6230
+1st Ave @ Central Park,John,St. Louis,McDonald,6095916230
+9-B Pine Rd,Jonathan,Atlantis,Brown,2125551234
+Broadway Avenue,Mary,Dallas2,Van-Dyke,1234567890123
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Jonathan,Co-Op City,Williams,1234567
+9-B Pine Rd,Robert,St. Louis,Johnson,123-456-7890
+1st Ave @ Central Park,J,Atlantis,Lee,12345abcde
+9-B Pine Rd,Robert,Los Angeles,Lee,609.591.6230
+Broadway Avenue,Alice,St. Louis,O'Neil,(609)5916230
+100# Maple Avenue,Jo,St. Louis,Smith,1234567890123
+100# Maple Avenue,Mary,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,O'Neil,609-591-6230
+LongAddressWithoutSpaces1234567890,Alice,Atlantis,Lee,123-456-7890
+ ,Alice,Atlantis,Van-Dyke,6095916230
+LongAddressWithoutSpaces1234567890,Robert, ,O'Neil,2125551234
+123A Elm St.,Johann,Los Angeles,O'Neil,2125551234
+6789 North 5th St.,J,Los Angeles,Brown,12345abcde
+1st Ave @ Central Park,Jonathan, ,Johnson,609.591.6230
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Robert,Phoenix@,Van-Dyke,6095916230
+123A Elm St.,Alice, ,Williams,6095916230
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,John, ,Van-Dyke,123-456-7890
+123A Elm St.,J,St. Louis,O'Neil,12345abcde
+ ,John,St. Louis,Brown,1234567
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Robert,New York,McDonald,1234567890123
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Jo,Atlantis,McDonald,(609)5916230
+5 W. Oak Blvd,John,San Francisco,Smith,12345abcde
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Mary,Los Angeles,Johnson,12345abcde
+9-B Pine Rd,Johann,Co-Op City,Brown,609-591-6230
+Broadway Avenue,Mary,Phoenix@,Lee,2125551234
+9-B Pine Rd,Mary, ,Smith,609-591-6230
+9-B Pine Rd,J,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,McDonald,1234567
+1st Ave @ Central Park,Johann,San Francisco,O'Neil,1234567
+5 W. Oak Blvd,Mary,Co-Op City,Williams,123-456-7890
+123A Elm St.,Jonathan,San Francisco,McDonald,6095916230
+6789 North 5th St.,Jonathan,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Smith,6095916230
+6789 North 5th St.,John,Phoenix@,O'Neil,609.591.6230
+Broadway Avenue,Alice,Co-Op City,O'Neil,12345abcde
+1st Ave @ Central Park,Mary,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Van-Dyke,(609)5916230
+5 W. Oak Blvd,J,Phoenix@,Lee,(609)5916230
+ ,Jonathan,Los Angeles,Williams,2125551234
+100# Maple Avenue,Robert,San Francisco,McDonald,609.591.6230
+6789 North 5th St.,Johann,Co-Op City,Van-Dyke,609-591-6230
+5 W. Oak Blvd,Johann,New York,Smith,609-591-6230
+LongAddressWithoutSpaces1234567890,John,Co-Op City,Johnson,1234567890123
+6789 North 5th St.,Mary,New York,O'Neil,1234567
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,J, ,Smith,2125551234
+ ,Jo,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Lee,123-456-7890
+6789 North 5th St.,Robert,Los Angeles,Williams,(609)5916230
+100# Maple Avenue,Johann,Dallas2,Johnson,123-456-7890
+1st Ave @ Central Park,Johann,New York,Brown,609.591.6230
+100# Maple Avenue,Jonathan,St. Louis,Williams,1234567
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Jo,Dallas2,Smith,609-591-6230
+5 W. Oak Blvd,Robert,Los Angeles,Williams,1234567
+123A Elm St.,Alice,Phoenix@,Van-Dyke,123-456-7890
+100# Maple Avenue,John,Phoenix@,Johnson,2125551234
+9-B Pine Rd,John,Atlantis,Smith,609-591-6230
+Broadway Avenue,Alice,St. Louis,Williams,609-591-6230
+
+
+===== VALID=====
+
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "Van-Dyke", address "5 W. Oak Blvd", city "St. Louis", and telephone "609.591.6230" as a new pet owner
+Then "J Van-Dyke" is an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "O'Neil", address "123A Elm St.", city "Los Angeles", and telephone "2125551234" as a new pet owner
+Then "Johann O'Neil" is an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "McDonald", address "123A Elm St.", city "San Francisco", and telephone "6095916230" as a new pet owner
+Then "Jonathan McDonald" is an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "Van-Dyke", address "6789 North 5th St.", city "Co-Op City", and telephone "609-591-6230" as a new pet owner
+Then "Johann Van-Dyke" is an owner
+----------------------------------------
+Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "Smith", address "5 W. Oak Blvd", city "New York", and telephone "609-591-6230" as a new pet owner
+Then "Johann Smith" is an owner
+----------------------------------------
+
+===== INVALID=====
+
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "Smith", address "LongAddressWithoutSpaces1234567890", city "Los Angeles", and telephone "609-591-6230" as a new pet owner
+Then "J Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "O'Neil", address " ", city "San Francisco", and telephone "123-456-7890" as a new pet owner
+Then "Robert O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "McDonald", address " ", city "Co-Op City", and telephone "609.591.6230" as a new pet owner
+Then "J McDonald" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "Van-Dyke", address "123A Elm St.", city "Atlantis", and telephone "1234567" as a new pet owner
+Then "Robert Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "Williams", address "9-B Pine Rd", city "Phoenix@", and telephone "12345abcde" as a new pet owner
+Then "Jo Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Johnson", address "123A Elm St.", city "ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem", and telephone "1234567890123" as a new pet owner
+Then "John Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "Brown", address "100# Maple Avenue", city " ", and telephone "(609)5916230" as a new pet owner
+Then "Johann Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Lee", address "6789 North 5th St.", city "Dallas2", and telephone "2125551234" as a new pet owner
+Then "John Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "Lee", address "100# Maple Avenue", city "Co-Op City", and telephone "6095916230" as a new pet owner
+Then "Alice Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "McDonald", address "Broadway Avenue", city "Los Angeles", and telephone "6095916230" as a new pet owner
+Then "Johann McDonald" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "O'Neil", address "5 W. Oak Blvd", city " ", and telephone "1234567890123" as a new pet owner
+Then "Jonathan O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "Williams", address "1st Ave @ Central Park", city "Dallas2", and telephone "609-591-6230" as a new pet owner
+Then "Robert Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "Brown", address "123 Elm Street with a very very very very very very very very very very very very very very very very long address", city "San Francisco", and telephone "2125551234" as a new pet owner
+Then "Alice Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "Van-Dyke", address "9-B Pine Rd", city "New York", and telephone "(609)5916230" as a new pet owner
+Then "Alice Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Smith", address "Broadway Avenue", city "Atlantis", and telephone "609.591.6230" as a new pet owner
+Then "John Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "Johnson", address "LongAddressWithoutSpaces1234567890", city "Phoenix@", and telephone "1234567" as a new pet owner
+Then "Johann Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "McDonald", address "6789 North 5th St.", city " ", and telephone "123-456-7890" as a new pet owner
+Then "Alice McDonald" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "Lee", address "123A Elm St.", city "New York", and telephone "12345abcde" as a new pet owner
+Then "Jonathan Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Van-Dyke", address "100# Maple Avenue", city "Los Angeles", and telephone "12345abcde" as a new pet owner
+Then "John Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "O'Neil", address "9-B Pine Rd", city "Dallas2", and telephone "6095916230" as a new pet owner
+Then "J O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "Smith", address "5 W. Oak Blvd", city "Dallas2", and telephone "1234567" as a new pet owner
+Then "Alice Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "Johnson", address "6789 North 5th St.", city "San Francisco", and telephone "(609)5916230" as a new pet owner
+Then "Jo Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "Williams", address "LongAddressWithoutSpaces1234567890", city "San Francisco", and telephone "609.591.6230" as a new pet owner
+Then "Mary Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "Brown", address " ", city "Phoenix@", and telephone "1234567890123" as a new pet owner
+Then "Mary Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "Van-Dyke", address "1st Ave @ Central Park", city "Co-Op City", and telephone "2125551234" as a new pet owner
+Then "Jo Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "Brown", address "5 W. Oak Blvd", city "Los Angeles", and telephone "123-456-7890" as a new pet owner
+Then "Jo Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "McDonald", address "123A Elm St.", city "Phoenix@", and telephone "609-591-6230" as a new pet owner
+Then "Mary McDonald" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Johnson", address " ", city "New York", and telephone "609-591-6230" as a new pet owner
+Then "John Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "Brown", address "123A Elm St.", city "Dallas2", and telephone "609.591.6230" as a new pet owner
+Then "Jo Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "O'Neil", address "6789 North 5th St.", city "St. Louis", and telephone "1234567" as a new pet owner
+Then "Mary O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "Smith", address "1st Ave @ Central Park", city "Phoenix@", and telephone "123-456-7890" as a new pet owner
+Then "Jonathan Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "Williams", address "100# Maple Avenue", city "New York", and telephone "2125551234" as a new pet owner
+Then "J Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "Smith", address "123A Elm St.", city "Co-Op City", and telephone "(609)5916230" as a new pet owner
+Then "Robert Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "Brown", address "Broadway Avenue", city "ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem", and telephone "12345abcde" as a new pet owner
+Then "Robert Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "Johnson", address "5 W. Oak Blvd", city "Atlantis", and telephone "6095916230" as a new pet owner
+Then "Mary Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "Lee", address "Broadway Avenue", city " ", and telephone "1234567" as a new pet owner
+Then "Jo Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "Williams", address "6789 North 5th St.", city "Atlantis", and telephone "1234567890123" as a new pet owner
+Then "Johann Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "Lee", address " ", city "Dallas2", and telephone "(609)5916230" as a new pet owner
+Then "Jonathan Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "McDonald", address "LongAddressWithoutSpaces1234567890", city "Dallas2", and telephone "12345abcde" as a new pet owner
+Then "Jonathan McDonald" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "Lee", address "9-B Pine Rd", city "San Francisco", and telephone "1234567890123" as a new pet owner
+Then "J Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "McDonald", address "5 W. Oak Blvd", city "ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem", and telephone "2125551234" as a new pet owner
+Then "Johann McDonald" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "O'Neil", address "100# Maple Avenue", city "Atlantis", and telephone "123-456-7890" as a new pet owner
+Then "Jo O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "Brown", address "LongAddressWithoutSpaces1234567890", city "New York", and telephone "6095916230" as a new pet owner
+Then "Jo Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "Johnson", address "Broadway Avenue", city "New York", and telephone "123-456-7890" as a new pet owner
+Then "J Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "Van-Dyke", address "LongAddressWithoutSpaces1234567890", city "St. Louis", and telephone "2125551234" as a new pet owner
+Then "Jonathan Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "Lee", address "123 Elm Street with a very very very very very very very very very very very very very very very very long address", city "St. Louis", and telephone "609-591-6230" as a new pet owner
+Then "Johann Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "O'Neil", address "123 Elm Street with a very very very very very very very very very very very very very very very very long address", city "ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem", and telephone "609.591.6230" as a new pet owner
+Then "Alice O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "Johnson", address "1st Ave @ Central Park", city "Los Angeles", and telephone "1234567890123" as a new pet owner
+Then "Alice Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Williams", address "LongAddressWithoutSpaces1234567890", city "ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem", and telephone "(609)5916230" as a new pet owner
+Then "John Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "Smith", address " ", city " ", and telephone "12345abcde" as a new pet owner
+Then "Johann Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "Van-Dyke", address "Broadway Avenue", city "San Francisco", and telephone "609-591-6230" as a new pet owner
+Then "Jonathan Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "McDonald", address "1st Ave @ Central Park", city "St. Louis", and telephone "6095916230" as a new pet owner
+Then "John McDonald" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "Brown", address "9-B Pine Rd", city "Atlantis", and telephone "2125551234" as a new pet owner
+Then "Jonathan Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "Van-Dyke", address "Broadway Avenue", city "Dallas2", and telephone "1234567890123" as a new pet owner
+Then "Mary Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "Williams", address "123 Elm Street with a very very very very very very very very very very very very very very very very long address", city "Co-Op City", and telephone "1234567" as a new pet owner
+Then "Jonathan Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "Johnson", address "9-B Pine Rd", city "St. Louis", and telephone "123-456-7890" as a new pet owner
+Then "Robert Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "Lee", address "1st Ave @ Central Park", city "Atlantis", and telephone "12345abcde" as a new pet owner
+Then "J Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "Lee", address "9-B Pine Rd", city "Los Angeles", and telephone "609.591.6230" as a new pet owner
+Then "Robert Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "O'Neil", address "Broadway Avenue", city "St. Louis", and telephone "(609)5916230" as a new pet owner
+Then "Alice O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "Smith", address "100# Maple Avenue", city "St. Louis", and telephone "1234567890123" as a new pet owner
+Then "Jo Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "O'Neil", address "100# Maple Avenue", city "ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem", and telephone "609-591-6230" as a new pet owner
+Then "Mary O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "Lee", address "LongAddressWithoutSpaces1234567890", city "Atlantis", and telephone "123-456-7890" as a new pet owner
+Then "Alice Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "Van-Dyke", address " ", city "Atlantis", and telephone "6095916230" as a new pet owner
+Then "Alice Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "O'Neil", address "LongAddressWithoutSpaces1234567890", city " ", and telephone "2125551234" as a new pet owner
+Then "Robert O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "Brown", address "6789 North 5th St.", city "Los Angeles", and telephone "12345abcde" as a new pet owner
+Then "J Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "Johnson", address "1st Ave @ Central Park", city " ", and telephone "609.591.6230" as a new pet owner
+Then "Jonathan Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "Van-Dyke", address "123 Elm Street with a very very very very very very very very very very very very very very very very long address", city "Phoenix@", and telephone "6095916230" as a new pet owner
+Then "Robert Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "Williams", address "123A Elm St.", city " ", and telephone "6095916230" as a new pet owner
+Then "Alice Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Van-Dyke", address "123 Elm Street with a very very very very very very very very very very very very very very very very long address", city " ", and telephone "123-456-7890" as a new pet owner
+Then "John Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "O'Neil", address "123A Elm St.", city "St. Louis", and telephone "12345abcde" as a new pet owner
+Then "J O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Brown", address " ", city "St. Louis", and telephone "1234567" as a new pet owner
+Then "John Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "McDonald", address "123 Elm Street with a very very very very very very very very very very very very very very very very long address", city "New York", and telephone "1234567890123" as a new pet owner
+Then "Robert McDonald" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "McDonald", address "123 Elm Street with a very very very very very very very very very very very very very very very very long address", city "Atlantis", and telephone "(609)5916230" as a new pet owner
+Then "Jo McDonald" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Smith", address "5 W. Oak Blvd", city "San Francisco", and telephone "12345abcde" as a new pet owner
+Then "John Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "Johnson", address "123 Elm Street with a very very very very very very very very very very very very very very very very long address", city "Los Angeles", and telephone "12345abcde" as a new pet owner
+Then "Mary Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "Brown", address "9-B Pine Rd", city "Co-Op City", and telephone "609-591-6230" as a new pet owner
+Then "Johann Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "Lee", address "Broadway Avenue", city "Phoenix@", and telephone "2125551234" as a new pet owner
+Then "Mary Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "Smith", address "9-B Pine Rd", city " ", and telephone "609-591-6230" as a new pet owner
+Then "Mary Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "McDonald", address "9-B Pine Rd", city "ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem", and telephone "1234567" as a new pet owner
+Then "J McDonald" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "O'Neil", address "1st Ave @ Central Park", city "San Francisco", and telephone "1234567" as a new pet owner
+Then "Johann O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "Williams", address "5 W. Oak Blvd", city "Co-Op City", and telephone "123-456-7890" as a new pet owner
+Then "Mary Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "Smith", address "6789 North 5th St.", city "ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem", and telephone "6095916230" as a new pet owner
+Then "Jonathan Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "O'Neil", address "6789 North 5th St.", city "Phoenix@", and telephone "609.591.6230" as a new pet owner
+Then "John O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "O'Neil", address "Broadway Avenue", city "Co-Op City", and telephone "12345abcde" as a new pet owner
+Then "Alice O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "Van-Dyke", address "1st Ave @ Central Park", city "ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem", and telephone "(609)5916230" as a new pet owner
+Then "Mary Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "Lee", address "5 W. Oak Blvd", city "Phoenix@", and telephone "(609)5916230" as a new pet owner
+Then "J Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "Williams", address " ", city "Los Angeles", and telephone "2125551234" as a new pet owner
+Then "Jonathan Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "McDonald", address "100# Maple Avenue", city "San Francisco", and telephone "609.591.6230" as a new pet owner
+Then "Robert McDonald" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Johnson", address "LongAddressWithoutSpaces1234567890", city "Co-Op City", and telephone "1234567890123" as a new pet owner
+Then "John Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Mary", last name "O'Neil", address "6789 North 5th St.", city "New York", and telephone "1234567" as a new pet owner
+Then "Mary O'Neil" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "J", last name "Smith", address "123 Elm Street with a very very very very very very very very very very very very very very very very long address", city " ", and telephone "2125551234" as a new pet owner
+Then "J Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "Lee", address " ", city "ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem", and telephone "123-456-7890" as a new pet owner
+Then "Jo Lee" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "Williams", address "6789 North 5th St.", city "Los Angeles", and telephone "(609)5916230" as a new pet owner
+Then "Robert Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "Johnson", address "100# Maple Avenue", city "Dallas2", and telephone "123-456-7890" as a new pet owner
+Then "Johann Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Johann", last name "Brown", address "1st Ave @ Central Park", city "New York", and telephone "609.591.6230" as a new pet owner
+Then "Johann Brown" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jonathan", last name "Williams", address "100# Maple Avenue", city "St. Louis", and telephone "1234567" as a new pet owner
+Then "Jonathan Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Jo", last name "Smith", address "123 Elm Street with a very very very very very very very very very very very very very very very very long address", city "Dallas2", and telephone "609-591-6230" as a new pet owner
+Then "Jo Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Robert", last name "Williams", address "5 W. Oak Blvd", city "Los Angeles", and telephone "1234567" as a new pet owner
+Then "Robert Williams" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "Van-Dyke", address "123A Elm St.", city "Phoenix@", and telephone "123-456-7890" as a new pet owner
+Then "Alice Van-Dyke" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Johnson", address "100# Maple Avenue", city "Phoenix@", and telephone "2125551234" as a new pet owner
+Then "John Johnson" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "John", last name "Smith", address "9-B Pine Rd", city "Atlantis", and telephone "609-591-6230" as a new pet owner
+Then "John Smith" is not an owner
+----------------------------------------
+The following is a scenario template: Given this is the current URL: "http://localhost:8080/owners/new"
+When I add a person with first name "Alice", last name "Williams", address "Broadway Avenue", city "St. Louis", and telephone "609-591-6230" as a new pet owner
+Then "Alice Williams" is not an owner
+----------------------------------------
+
+===== STATISTICS =====
+
+Generated 5 valid test cases
+Generated 102 invalid test cases
+Total 107 test cases
+========================================

@@ -13,7 +13,7 @@ def get_response_from_llm(model_name, messages, api_key=None, api_endpoint=None,
         api_key = os.getenv("OPENAI_API_KEY")
 
     if not api_endpoint:
-        api_endpoint = "https://api.rcouyi.com/v1/"
+        api_endpoint = "https://api.openai.com/v1"
 
     if not api_key:
         print("API 密钥未提供！")

@@ -1,5 +1,7 @@
 # WebMAC: A Multi-Agent Collaborative Framework for Scenario Testing of Web Systems
 
+> Windows 使用者請先閱讀 [WINDOWS_SETUP.md](WINDOWS_SETUP.md)。本次修改與測試紀錄整理於 [TEST_RESULTS.md](TEST_RESULTS.md)。測試網站原始碼已放在 [`spring-petclinic/`](spring-petclinic/)。
+
 ## Introduce
 
 ![Overview](overview.png)
@@ -78,8 +80,11 @@ tester = Test()
 - `data/`: Data Files
 - `Experiment_Runs/`: Experimental Run Results
 - `knowledgebase/`: Knowledge Base Files
+- `run_log/`: Windows 實際執行與測試結果
+- `spring-petclinic/`: WebMAC 測試用 Spring PetClinic 網站
 
 ## Important Notes 
 
 - Ensure that the OpenAI API key has been correctly set.
 - Before running, the target web application (such as PetClinic, etc.) needs to be started.
+- Do not commit `dev.env`, `.env`, `.venv`, generated browser work files, or API keys.

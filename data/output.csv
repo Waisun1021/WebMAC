@@ -1,79 +1,108 @@
-phoneNumber,balance,password,username
-111222abcd,3.141,password1,exampleName
-,0,Pass1234@,user1
-09876543210,99999,Pass1234@,
-9876543210,,abcdefghi,alice@123
-09876543210,1000,password1,testUser
-123456789,1000,Pass1234@,AAAAAAAAAAAAAAAAAAAAA
-111222abcd,1000,SecureP@ss,user_1
-111222abcd,,ppppppppppppppppppppp,ab
-09876543210,5a,abcdefghi,user_1
-+1-555-666-7777,3.141,abcdefghi,user1
-,1@,,ab
-123456789,0,abcdefghi,testUser
-444555@666,-1,Pass1234@,testUser
-123456789,-1,ppppppppppppppppppppp,
-9876543210,3.141,,AAAAAAAAAAAAAAAAAAAAA
-123456789,99999,password1,alice@123
-741-852-9630,5a,123456789,exampleName
-9876543210,1000,123456789,ab
-+1-555-666-7777,1@,Pass1234@,alice@123
-123456789,3.141,123456789,user_1
-09876543210,-1,,exampleName
-9876543210,5a,1234567,testUser
-741-852-9630,1@,1234567,
-9876543210,99999,SecureP@ss,user1
-+1-555-666-7777,,123456789,
-444555@666,0,1234567,exampleName
-444555@666,5a,ppppppppppppppppppppp,user1
-111222abcd,-1,1234567,user1
-444555@666,1000,abcdefghi,
-444555@666,1@,password1,AAAAAAAAAAAAAAAAAAAAA
-741-852-9630,,,user_1
-111222abcd,5a,Pass1234@,AAAAAAAAAAAAAAAAAAAAA
-09876543210,1@,123456789,user1
-741-852-9630,3.141,Pass1234@,ab
-+1-555-666-7777,99999,ppppppppppppppppppppp,exampleName
-09876543210,0,ppppppppppppppppppppp,alice@123
-,99999,1234567,user_1
-111222abcd,1@,abcdefghi,exampleName
-,,SecureP@ss,testUser
-9876543210,0,password1,
-741-852-9630,-1,SecureP@ss,alice@123
-123456789,,SecureP@ss,exampleName
-9876543210,1@,ppppppppppppppppppppp,user_1
-+1-555-666-7777,1@,SecureP@ss,AAAAAAAAAAAAAAAAAAAAA
-123456789,5a,1234567,ab
-+1-555-666-7777,1000,1234567,alice@123
-+1-555-666-7777,99999,,testUser
-123456789,1000,,user1
-09876543210,3.141,1234567,AAAAAAAAAAAAAAAAAAAAA
-09876543210,,password1,ab
-,3.141,123456789,alice@123
-741-852-9630,0,abcdefghi,AAAAAAAAAAAAAAAAAAAAA
-+1-555-666-7777,-1,abcdefghi,ab
-741-852-9630,3.141,ppppppppppppppppppppp,testUser
-111222abcd,0,,alice@123
-9876543210,1000,Pass1234@,exampleName
-444555@666,99999,abcdefghi,ab
-,-1,123456789,AAAAAAAAAAAAAAAAAAAAA
-444555@666,3.141,SecureP@ss,
-,5a,,
-+1-555-666-7777,-1,password1,user_1
-444555@666,,1234567,user1
-444555@666,1@,123456789,testUser
-741-852-9630,99999,password1,user1
-444555@666,,Pass1234@,user_1
-123456789,1@,SecureP@ss,ab
-,1000,password1,exampleName
-444555@666,5a,password1,alice@123
-+1-555-666-7777,5a,SecureP@ss,AAAAAAAAAAAAAAAAAAAAA
-,,abcdefghi,AAAAAAAAAAAAAAAAAAAAA
-+1-555-666-7777,0,SecureP@ss,ab
-,1000,ppppppppppppppppppppp,AAAAAAAAAAAAAAAAAAAAA
-111222abcd,99999,123456789,testUser
-444555@666,99999,,AAAAAAAAAAAAAAAAAAAAA
-9876543210,-1,1234567,exampleName
-111222abcd,0,123456789,
-741-852-9630,1000,password1,ab
-09876543210,0,SecureP@ss,user_1
+address,firstName,city,lastName,telephone
+LongAddressWithoutSpaces1234567890,J,Los Angeles,Smith,609-591-6230
+ ,Robert,San Francisco,O'Neil,123-456-7890
+ ,J,Co-Op City,McDonald,609.591.6230
+123A Elm St.,Robert,Atlantis,Van-Dyke,1234567
+9-B Pine Rd,Jo,Phoenix@,Williams,12345abcde
+123A Elm St.,John,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Johnson,1234567890123
+100# Maple Avenue,Johann, ,Brown,(609)5916230
+6789 North 5th St.,John,Dallas2,Lee,2125551234
+100# Maple Avenue,Alice,Co-Op City,Lee,6095916230
+Broadway Avenue,Johann,Los Angeles,McDonald,6095916230
+5 W. Oak Blvd,Jonathan, ,O'Neil,1234567890123
+1st Ave @ Central Park,Robert,Dallas2,Williams,609-591-6230
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Alice,San Francisco,Brown,2125551234
+9-B Pine Rd,Alice,New York,Van-Dyke,(609)5916230
+Broadway Avenue,John,Atlantis,Smith,609.591.6230
+LongAddressWithoutSpaces1234567890,Johann,Phoenix@,Johnson,1234567
+6789 North 5th St.,Alice, ,McDonald,123-456-7890
+123A Elm St.,Jonathan,New York,Lee,12345abcde
+100# Maple Avenue,John,Los Angeles,Van-Dyke,12345abcde
+9-B Pine Rd,J,Dallas2,O'Neil,6095916230
+5 W. Oak Blvd,Alice,Dallas2,Smith,1234567
+6789 North 5th St.,Jo,San Francisco,Johnson,(609)5916230
+LongAddressWithoutSpaces1234567890,Mary,San Francisco,Williams,609.591.6230
+ ,Mary,Phoenix@,Brown,1234567890123
+1st Ave @ Central Park,Jo,Co-Op City,Van-Dyke,2125551234
+5 W. Oak Blvd,Jo,Los Angeles,Brown,123-456-7890
+123A Elm St.,Mary,Phoenix@,McDonald,609-591-6230
+ ,John,New York,Johnson,609-591-6230
+123A Elm St.,Jo,Dallas2,Brown,609.591.6230
+6789 North 5th St.,Mary,St. Louis,O'Neil,1234567
+1st Ave @ Central Park,Jonathan,Phoenix@,Smith,123-456-7890
+100# Maple Avenue,J,New York,Williams,2125551234
+123A Elm St.,Robert,Co-Op City,Smith,(609)5916230
+Broadway Avenue,Robert,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Brown,12345abcde
+5 W. Oak Blvd,Mary,Atlantis,Johnson,6095916230
+Broadway Avenue,Jo, ,Lee,1234567
+6789 North 5th St.,Johann,Atlantis,Williams,1234567890123
+ ,Jonathan,Dallas2,Lee,(609)5916230
+LongAddressWithoutSpaces1234567890,Jonathan,Dallas2,McDonald,12345abcde
+9-B Pine Rd,J,San Francisco,Lee,1234567890123
+5 W. Oak Blvd,Johann,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,McDonald,2125551234
+100# Maple Avenue,Jo,Atlantis,O'Neil,123-456-7890
+LongAddressWithoutSpaces1234567890,Jo,New York,Brown,6095916230
+Broadway Avenue,J,New York,Johnson,123-456-7890
+LongAddressWithoutSpaces1234567890,Jonathan,St. Louis,Van-Dyke,2125551234
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Johann,St. Louis,Lee,609-591-6230
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Alice,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,O'Neil,609.591.6230
+1st Ave @ Central Park,Alice,Los Angeles,Johnson,1234567890123
+LongAddressWithoutSpaces1234567890,John,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Williams,(609)5916230
+ ,Johann, ,Smith,12345abcde
+Broadway Avenue,Jonathan,San Francisco,Van-Dyke,609-591-6230
+5 W. Oak Blvd,J,St. Louis,Van-Dyke,609.591.6230
+1st Ave @ Central Park,John,St. Louis,McDonald,6095916230
+9-B Pine Rd,Jonathan,Atlantis,Brown,2125551234
+Broadway Avenue,Mary,Dallas2,Van-Dyke,1234567890123
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Jonathan,Co-Op City,Williams,1234567
+9-B Pine Rd,Robert,St. Louis,Johnson,123-456-7890
+1st Ave @ Central Park,J,Atlantis,Lee,12345abcde
+9-B Pine Rd,Robert,Los Angeles,Lee,609.591.6230
+Broadway Avenue,Alice,St. Louis,O'Neil,(609)5916230
+100# Maple Avenue,Jo,St. Louis,Smith,1234567890123
+100# Maple Avenue,Mary,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,O'Neil,609-591-6230
+LongAddressWithoutSpaces1234567890,Alice,Atlantis,Lee,123-456-7890
+ ,Alice,Atlantis,Van-Dyke,6095916230
+LongAddressWithoutSpaces1234567890,Robert, ,O'Neil,2125551234
+123A Elm St.,Johann,Los Angeles,O'Neil,2125551234
+6789 North 5th St.,J,Los Angeles,Brown,12345abcde
+1st Ave @ Central Park,Jonathan, ,Johnson,609.591.6230
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Robert,Phoenix@,Van-Dyke,6095916230
+123A Elm St.,Alice, ,Williams,6095916230
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,John, ,Van-Dyke,123-456-7890
+123A Elm St.,J,St. Louis,O'Neil,12345abcde
+ ,John,St. Louis,Brown,1234567
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Robert,New York,McDonald,1234567890123
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Jo,Atlantis,McDonald,(609)5916230
+5 W. Oak Blvd,John,San Francisco,Smith,12345abcde
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Mary,Los Angeles,Johnson,12345abcde
+9-B Pine Rd,Johann,Co-Op City,Brown,609-591-6230
+Broadway Avenue,Mary,Phoenix@,Lee,2125551234
+9-B Pine Rd,Mary, ,Smith,609-591-6230
+9-B Pine Rd,J,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,McDonald,1234567
+1st Ave @ Central Park,Johann,San Francisco,O'Neil,1234567
+5 W. Oak Blvd,Mary,Co-Op City,Williams,123-456-7890
+123A Elm St.,Jonathan,San Francisco,McDonald,6095916230
+6789 North 5th St.,Jonathan,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Smith,6095916230
+6789 North 5th St.,John,Phoenix@,O'Neil,609.591.6230
+Broadway Avenue,Alice,Co-Op City,O'Neil,12345abcde
+1st Ave @ Central Park,Mary,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Van-Dyke,(609)5916230
+5 W. Oak Blvd,J,Phoenix@,Lee,(609)5916230
+ ,Jonathan,Los Angeles,Williams,2125551234
+100# Maple Avenue,Robert,San Francisco,McDonald,609.591.6230
+6789 North 5th St.,Johann,Co-Op City,Van-Dyke,609-591-6230
+5 W. Oak Blvd,Johann,New York,Smith,609-591-6230
+LongAddressWithoutSpaces1234567890,John,Co-Op City,Johnson,1234567890123
+6789 North 5th St.,Mary,New York,O'Neil,1234567
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,J, ,Smith,2125551234
+ ,Jo,ThisCityNameIsCertainlyWayTooLongToBeValidInAnyDatabaseSystem,Lee,123-456-7890
+6789 North 5th St.,Robert,Los Angeles,Williams,(609)5916230
+100# Maple Avenue,Johann,Dallas2,Johnson,123-456-7890
+1st Ave @ Central Park,Johann,New York,Brown,609.591.6230
+100# Maple Avenue,Jonathan,St. Louis,Williams,1234567
+123 Elm Street with a very very very very very very very very very very very very very very very very long address,Jo,Dallas2,Smith,609-591-6230
+5 W. Oak Blvd,Robert,Los Angeles,Williams,1234567
+123A Elm St.,Alice,Phoenix@,Van-Dyke,123-456-7890
+100# Maple Avenue,John,Phoenix@,Johnson,2125551234
+9-B Pine Rd,John,Atlantis,Smith,609-591-6230
+Broadway Avenue,Alice,St. Louis,Williams,609-591-6230

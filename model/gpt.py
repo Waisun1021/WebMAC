@@ -1,7 +1,7 @@
 import os
 from openai import OpenAI
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url="https://api.rcouyi.com/v1/")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url="https://api.openai.com/v1")
 
 # class GPT3_5():
 #     def __init__(self, message):
@@ -23,5 +23,5 @@ if __name__ == '__main__':
         {"role": "user", "content": "Hello!"},
         {"role": "assistant", "content": "Hi there!"}
     ]
-    b = gpt(model="gpt-3.5-turbo-0125", message=messages)
+    b = gpt(model="gpt-4.1-mini", message=messages)
     print(b)

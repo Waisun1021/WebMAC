@@ -4,7 +4,7 @@ import json
 import os
 from io import StringIO
 
-from Demos.RegCreateKeyTransacted import keyname
+
 
 from model.utils import get_response_from_llm
 from model.pict import trans_to_pict
@@ -29,22 +29,20 @@ You can only output scenario templates without any annotations."""
 
     message = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]
 
-    response = get_response_from_llm("gpt-3.5-turbo-0125", messages=message)
+    response = get_response_from_llm("gpt-4.1-mini", messages=message)
 
     return response
-
 def read_csv_to_string(file_path):
-
     try:
-        # 打开文件并读取内容
         with open(file_path, "r", encoding="utf-8") as file:
-            content = csv.DictReader(file)
-        return content
+            return file.read()
+
     except FileNotFoundError:
         print(f"Error: File {file_path} was not found.")
         return None
+
     except Exception as e:
-        print(f"An error occurred when reading the file：{e}")
+        print(f"An error occurred when reading the file: {e}")
         return None
 
 def replace_var_to_template(file_path, true_template, false_template, dict_valid):
@@ -150,7 +148,7 @@ Is_Time:"""
 
     time_message = [{"role": "system", "content": time_system}, {"role": "user", "content": time_prompt}]
 
-    istime = get_response_from_llm("gpt-3.5-turbo-0125", messages=time_message)
+    istime = get_response_from_llm("gpt-4.1-mini", messages=time_message)
 
     if "1" in istime:
         now = datetime.now()
@@ -161,7 +159,7 @@ Is_Time:"""
         message = [{"role": "system", "content": system}, {"role": "user", "content": prompt + "Current time:" + formatted_time}]
 
         # Call the OpenAI API to obtain the response of the model
-        var = get_response_from_llm("gpt-3.5-turbo-0125", messages=message)
+        var = get_response_from_llm("gpt-4.1-mini", messages=message)
     elif "0" in istime:
         prompt = metamorphosis_var_prompt(scenario, variable, equivalence_class)
 
@@ -169,12 +167,18 @@ Is_Time:"""
         message = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]
 
         # Call the OpenAI API to obtain the response of the model
-        var = get_response_from_llm("gpt-3.5-turbo-0125", messages=message)
+        var = get_response_from_llm("gpt-4.1-mini", messages=message)
 
     return var
 
-def extract_equivalence_classes(feature, variable_list, knowledge_base_path="C:/Users/DELL/Desktop/WebMAC/knowledgebase/knowledge_tracw.json"):
-    """
+def extract_equivalence_classes(feature, variable_list, knowledge_base_path=None):
+    if knowledge_base_path is None:
+        knowledge_base_path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)),
+            "knowledgebase",
+            "knowledge_petclinic.json"
+        )    
+        """
     """
     # Read the knowledge base file
     try:

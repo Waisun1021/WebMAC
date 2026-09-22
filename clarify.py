@@ -36,7 +36,7 @@ class Clarify:
         max_round: int = 50
     ) -> None:
 
-        self.base_model: str = base_model or "gpt-3.5-turbo-0125"
+        self.base_model: str = base_model or "gpt-4.1-mini"
         self.execution_config: Dict[str, Any] | None = execution_config
         if not execution_config:
             self.execution_config: Dict[str, Any] = {
@@ -61,7 +61,7 @@ class Clarify:
         self._llm_config_list: List[Dict[str, str]] = [
             {
                 "model": self.base_model,
-                "base_url": "https://api.rcouyi.com/v1/",
+                "base_url": "https://api.openai.com/v1",
                 "api_key": os.environ.get("OPENAI_API_KEY")
             }
         ]
@@ -303,7 +303,13 @@ class Clarify:
         result: Chat = Chat(
             history=chat_result.chat_history,
             duration=duration,
-            nr_tokens=chat_result.cost["usage_excluding_cached_inference"][self.base_model]["total_tokens"],
+            nr_tokens=sum(
+            model_usage.get("total_tokens", 0)
+                for model_usage in chat_result.cost.get(
+                    "usage_excluding_cached_inference", {}
+                ).values()
+                if isinstance(model_usage, dict)
+            ),
             interactions=len(chat_result.chat_history),
             nr_generated_scripts=Clarify.get_nr_generated_scripts(chat_result.chat_history),
             nr_code_errors=Clarify.get_nr_code_errors(chat_result.chat_history),
